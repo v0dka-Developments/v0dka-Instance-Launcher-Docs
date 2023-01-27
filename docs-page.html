@@ -1,0 +1,2131 @@
+
+<!--
+  _      _                        
+ : `.--.' ;              _....,_  
+ .'      `.      _..--'"'       `-._
+:          :_.-'"                  .`.
+:  6    6  :                     :  '.;
+:          :                      `..';
+`: .----. :'                          ;
+  `._Y _.'               '           ;
+    'U'      .'          `.         ; 
+       `:   ;`-..___       `.     .'`.
+	   _:   :  :    ```"''"'``.    `.  `.
+     .'     ;..'            .'       `.'`
+    `.......'              `........-'`
+well i see you have found an easter egg :O maybe there is more? who will know?
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>V0dka Instance Manager</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+
+	<!-- FontAwesome JS-->
+	<script defer src="assets/fontawesome/js/all.min.js"></script>
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" href="./assets/css/atom-one-dark-min.css">
+	<link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+	<!-- Theme CSS -->
+	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head>
+
+<body class="docs-page">
+
+	<header class="header fixed-top">
+		<div class="branding docs-branding">
+			<div class="container-fluid position-relative py-2">
+				<div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+						type="button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<div class="site-logo"><a class="navbar-brand"><img class="logo-icon me-2"
+								src="assets/images/logo.png" alt="logo"></a></div>
+				</div><!--//docs-logo-wrapper-->
+				<div class="docs-top-utilities d-flex justify-content-end align-items-center">
+					<div class="top-search-box d-none d-lg-flex px-2">
+
+						<input type="search" placeholder="Search the docs..." name="search"
+							class="form-control search-input " id="search-term">
+
+
+
+
+
+					</div>
+					<div class="d-none d-lg-flex px-2">
+
+
+						<button class="btn btn-light" data-search="next"><i class="fa-solid fa-arrow-down"></i></button>
+
+
+
+
+
+					</div>
+					<div class="d-none d-lg-flex px-2">
+
+
+
+						<button class="btn btn-light" data-search="prev"><i class="fa-solid fa-arrow-up"></i></button>
+
+
+
+
+
+					</div>
+
+
+
+					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+						<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fab fa-discord fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="#"><i class="fab fa-youtube fa-fw"></i></a></li>
+
+
+					</ul><!--//social-list-->
+					<a href="#"
+						class="btn btn-primary d-none d-lg-flex">Download</a>
+				</div><!--//docs-top-utilities-->
+			</div><!--//container-->
+		</div><!--//branding-->
+	</header><!--//header-->
+
+
+	<div class="docs-wrapper pt-3">
+		<div id="docs-sidebar" class="docs-sidebar">
+			<div class="top-search-box d-lg-none p-3">
+
+			</div>
+			<nav id="docs-nav" class="docs-nav navbar">
+				<ul class="section-items list-unstyled nav flex-column pb-3">
+					<li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span
+								class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introduction</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Features</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">How It Works</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Why Linux Not Windows?</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span
+								class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Prerequisite's</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Linux Packages</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Python</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">Mysql</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-5">API</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-6">Instance Launcher</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span
+								class="theme-icon-holder me-2"><i class="fas fa-box"></i></span>API</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">/create</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">/delete</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">/masterdelete</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-4">/deleteconsolerequest</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-5">/request_player_server</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-6">/spin_me_up</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-7">/spin_up_complete</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-8">/status</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-9">/download_update</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-10">/add_dedicated_server</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-11">/get_broadcast</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span
+								class="theme-icon-holder me-2"><i class="fas fa-laptop-code"></i></span>Instance
+							Manager</a>
+					</li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Console Commands</a></li>
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span
+								class="theme-icon-holder me-2"><i class="fas fa-cogs"></i></span>Integration</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">ServerComponent</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">C++</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-3">Header File</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-5-4">BluePrint</a></li>
+
+					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span
+								class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
+				</ul>
+
+			</nav><!--//docs-nav-->
+		</div><!--//docs-sidebar-->
+		<div class="docs-content">
+
+			<div class="container">
+				<article class="docs-article" id="section-1">
+					<div id="ShowMe" class="text-center">
+						<iframe id="frame" src="" width="500" height="700" frameborder="0" scrolling="no">
+						</iframe>
+					</div>
+					<header class="docs-header">
+						<h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 2023-14-01</span>
+						</h1>
+						<section class="docs-intro">
+							<p>v0dka Instance Launcher is a project I have written in Python and is targeted towards Linux-based systems. 
+								I saw an issue with existing products out there, both free and paid solutions, not offering Linux support or if they did have Linux support,
+								they lacked a lot of features that I was looking for. <br class="pb-2"></br>
+								The closest match I have found is a system called OpenWorldServers, developed by a great guy called Dartanlla.
+								( <a target=”_blank” href="https://www.openworldserver.com/">Click
+									Click here for their website.</a> )
+									This is a really good project, however, there is no official Linux support for their system. 
+									OWS does work for Linux, but any Linux-related issues you are left to solve yourself or rely on the community to help resolve.
+								<br class="pb-2"></br>
+								The idea of this system is that you would build your own character persistence API, giving you true freedom of choosing which language to write this in, 
+								whether it is C#, Java, PHP, JavaScript, Python... the list goes on, the choice is yours, and your server spin up/shut down/management is all handled 
+								through the vodka instance manager.
+								<br class="pb-2"></br>
+								It should be noted that I will not accept PRs for Windows-related "fixes" 
+								as this product does not and will not cover Windows. 
+								You are more than welcome to modify the source code to make it work for Windows.
+								<br class="pb-2"></br>
+							<div class="table-responsive my-4">
+								<table class="table table-bordered table-dark text-center">
+									<thead>
+										<tr>
+											<th scope="col">Feature</th>
+											<th scope="col">VodkaInstanceManager</th>
+											<th scope="col">OpenWorldServer</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Linux Support</td>
+											<td><i class="fa-solid fa-check"></i></td>
+											<td><i class="fa-solid fa-x"></i></td>
+										</tr>
+										<tr>
+											<td>Windows Support</td>
+											<td><i class="fa-solid fa-x"></i></td>
+											<td><i class="fa-solid fa-check"></i></td>
+										</tr>
+										<tr>
+											<td>Easy Build Deployment</td>
+											<td><i class="fa-solid fa-check"></i></td>
+											<td><i class="fa-solid fa-x"></i></td>
+										</tr>
+										<tr>
+											<td>Web Interface</td>
+											<td><i class="fa-solid fa-check"></i></td>
+											<td><i class="fa-solid fa-x"></i></td>
+										</tr>
+										<tr>
+											<td>Character Persistance</td>
+
+											<td><i class="fa-solid fa-x"></i></td>
+											<td><i class="fa-solid fa-check"></i></td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+
+
+							</p>
+						</section><!--//docs-intro-->
+
+
+
+					</header>
+					<section class="docs-section" id="item-1-1">
+						<h2 class="section-heading">Features</h2>
+						<div class="table-responsive my-4">
+							<table class="table table-bordered table-dark text-center">
+								<thead>
+									<tr>
+										<th scope="col">Feature</th>
+										<th scope="col">VodkaInstanceManager</th>
+
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Linux Support</td>
+										<td><i class="fa-solid fa-check"></i></td>
+
+									</tr>
+									<tr>
+										<td>Easy Build Deployment</td>
+										<td><i class="fa-solid fa-check"></i></td>
+
+									</tr>
+									<tr>
+										<td>Web Interface</td>
+										<td><i class="fa-solid fa-check"></i></td>
+
+									</tr>
+									<tr>
+										<td>Console Commands(for those who wish to use console)</td>
+										<td><i class="fa-solid fa-check"></i></td>
+
+									</tr>
+									<tr>
+										<td>Show Player Count</td>
+										<td><i class="fa-solid fa-check"></i></td>
+
+									</tr>
+									<tr>
+										<td>Broadcast messages to servers</td>
+										<td><i class="fa-solid fa-check"></i></td>
+
+									</tr>
+									<tr>
+										<td>Windows Support</td>
+										<td><i class="fa-solid fa-x"></i></td>
+
+									</tr>
+
+
+								</tbody>
+							</table>
+							<h5 class="mt-5">Easy Build Deployment:</h5>
+
+							<p>From within the web interface, you have the option to upload your game server builds. Any server that is connected to the Vodka Instance Manager will check for new builds on startup, or you can tell all the servers to update at the push of a button.</p>
+
+							<div class="features-lightbox mb-3">
+								<div class="col-12 col-md-12 mb-12">
+									<a href="assets/images/build_page.png"><img
+											class="figure-img img-fluid shadow rounded"
+											src="assets/images/build_page.png" alt="" title="Build Upload" /></a>
+								</div>
+
+							</div><!--//gallery-->
+
+							<h5 class="mt-5">Web Interface:</h5>
+
+							<p>A simple and user-friendly web interface allows you to control your servers, 
+								from sending broadcast messages, starting maps, restarting servers, updating servers and much more!
+							</p>
+
+							<div class="features-lightbox mb-3">
+								<div class="col-12 col-md-12 mb-12">
+									<a href="assets/images/web_interface.png"><img
+											class="figure-img img-fluid shadow rounded"
+											src="assets/images/web_interface.png" alt="" title="Web Interface" /></a>
+								</div>
+
+							</div><!--//gallery-->
+
+							<h5 class="mt-5">Console Commands:</h5>
+
+							<p>For those of you who are not interested in using UIs and want the raw power of the console,
+								 the system exposes a lot of its functionality through the console, with more features being added in the future.</p>
+
+							<div class="features-lightbox mb-3">
+								<div class="col-12 col-md-12 mb-12">
+									<a href="assets/images/console_commands.png"><img
+											class="figure-img img-fluid shadow rounded"
+											src="assets/images/console_commands.png" alt=""
+											title="Console Commands" /></a>
+								</div>
+
+							</div><!--//gallery-->
+
+							<h5 class="mt-5">Show Player Count:</h5>
+
+							<p>The ability to see player count from within the web interface so you can see how active your servers are currently.</p>
+
+							<div class="features-lightbox mb-3">
+								<div class="col-12 col-md-12 mb-12">
+									<a href="assets/images/player_count.png"><img
+											class="figure-img img-fluid shadow rounded"
+											src="assets/images/player_count.png" alt="" title="Show Player Count" /></a>
+								</div>
+
+							</div><!--//gallery-->
+
+
+							<h5 class="mt-5">Broadcast messages to servers:</h5>
+
+							<p>The ability to see player count from within the web interface so you can see how active
+								your servers currently are</p>
+
+
+							<div class="features-lightbox mb-3 ">
+								<div class="col-12 col-md-4 mb-3">
+									<a href="assets/images/broadcast_1.png"><img
+											class="figure-img img-fluid shadow rounded"
+											src="assets/images/broadcast_1.png" alt="" title="Broadcast Message" /></a>
+								</div>
+								<div class="col-12 col-md-4 mb-3">
+									<a href="assets/images/broadcast_2.png"><img
+											class="figure-img img-fluid shadow rounded"
+											src="assets/images/broadcast_2.png" alt="" title="Broadcast Message" /></a>
+								</div><!--//col-->
+								<div class="col-12 col-md-4 mb-3">
+									<a href="assets/images/broadcast_3.png"><img
+											class="figure-img img-fluid shadow rounded"
+											src="assets/images/broadcast_3.png" alt="" title="Broadcast message" /></a>
+								</div><!--//col-->
+
+							</div><!--//gallery-->
+
+
+
+							<h5 class="mt-5">No Windows:</h5>
+
+							<p>Yes, this is for Linux only and I will update it for Linux only.
+								 Any Windows modifications, 
+								 I will not accept PRs for, but you can modify the code to suit your own personal needs 
+								 if you really need it for Windows.</p>
+
+							<div class="features-lightbox mb-3">
+								<div class="col-12 col-md-12 mb-12">
+									<a href="assets/images/no_windows.jpg"><img
+											class="figure-img img-fluid shadow rounded"
+											src="assets/images/no_windows.jpg" alt="" title="Anti Windows Policy" /></a>
+								</div>
+
+							</div><!--//gallery-->
+
+
+
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-1-2">
+						<h2 class="section-heading">How it works</h2>
+						<p>The system is split into two parts: the API and the Instance Manager.</p>
+						<h5 class="mt-5">API:</h5>
+						<p>The API is a web service written in Python using the Flask framework, it connects to a MySQL database for information. 
+							The API exposes routes (URLs) which different systems can interact with to perform certain tasks.
+						</p>
+						<h5 class="mt-5">Instance Manager:</h5>
+						<p>The Instance Manager makes requests to the API using different routes (URLs). 
+							The two main routes for the program are /status and /spin_me_up. The /status route will return a list of 
+							tasks that the system should perform such as shutting down instances, performing updates, etc. whereas 
+							the /spin_me_up route will return a list of instances waiting to be created. Once the Instance Manager has received a message,
+							 it will take the appropriate actions.
+						</p>
+						<h5 class="mt-5">Overview:</h5>
+
+						<div class="features-lightbox row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+								<a href="assets/images/basic_understanding_of_vil.png"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/basic_understanding_of_vil.png" alt=""
+										title="Basic Overview" /></a>
+							</div>
+
+
+						</div><!--//gallery-->
+
+
+
+
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-1-3">
+						<h2 class="section-heading">Why Linux Not Windows?</h2>
+						<p>As someone who has spent their life working with Linux, I find that it can be difficult to use Windows systems for multiple reasons. 
+							The Linux command line is very powerful, whereas Windows has a lot of loopholes to jump through to perform certain tasks. Additionally, 
+							the cost of Windows servers is not cheap, and they are licensed per CPU core, while Linux servers are free.
+							</h5>
+						<div class="table-responsive my-4">
+							<table class="table table-bordered table-dark text-center">
+								<thead>
+									<tr>
+										<th scope="col">Feature</th>
+										<th scope="col">Linux</th>
+										<th scope="col">Windows</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Cpu/Ram usage(no additional software)</td>
+										<td>depends on distro, but average idle usage can be between 100mb and 1gb and
+											most distro's can run on 1 core</td>
+										<td>requires minimum 2gb of memory and 4 cores </td>
+									</tr>
+									<tr>
+										<td>License Cost</td>
+										<td>Free unless you pay for support from RedHat</td>
+										<td>Expensive as you are charged per cpu core, if you have under 16 core's you
+											are charged for a 16core license, if you want to do virtualization this also
+											introduces more costs as with most server licenses its 1 virtual machine
+										</td>
+									</tr>
+									<tr>
+										<td>Updates</td>
+										<td>Can update the system in 99.9% of cases without having to reboot(yes even
+											kernal updates) the machine having almost zero downtime</td>
+										<td>Windows updates are a hassle and not being updated can put the server at
+											risk, installing these updates requires server restart which means you have
+											downtime</td>
+									</tr>
+									<tr>
+										<td>OS Speed</td>
+										<td>Fast and better at managing memory/process's</td>
+										<td>Slow and does not handle process's or memory as good as linux</td>
+									</tr>
+									<tr>
+										<td>Support</td>
+
+										<td>not great support and is mainly community unless you have a RedHat license
+										</td>
+										<td>Actually very good support you have Microsoft call centres/forums and
+											community to resolve your issues</td>
+									</tr>
+
+								</tbody>
+							</table>
+					</section><!--//section-->
+
+
+				</article>
+
+				<div class="modal" tabindex="-1" id="secretmodal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Vodka is watching</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<img src="https://i.gyazo.com/e2057d386077ff272973a8347bc494d9.png"></img>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<article class="docs-article" id="section-2">
+					<header class="docs-header">
+						<h1 class="docs-heading">Installation</h1>
+						<section class="docs-intro">
+							<p>For this documentation, I will be covering Debian 11. However, this setup will work on 99% of Linux distributions. 
+								If you would like me to cover setup for a distribution other than Debian 11, let me know on Discord, and I can write some documentation for these distro's</p>
+						</section><!--//docs-intro-->
+					</header>
+					<section class="docs-section" id="item-2-1">
+						<h2 class="section-heading">Prerequisite's</h2>
+						<p>
+							The following is a list of packages/tools that will be required for this system to work and
+							i will cover installation/configuration throughout the different sections
+
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="hljs">
+		<span class="hljs-string"><span class="hljs-string">lsof</span><span class="hljs-string"><span class="hljs-text">                    <a target="_blank" href="https://man7.org/linux/man-pages/man8/lsof.8.html">LSOF docs</a> </span></span>
+		<span class="hljs-string"><span class="hljs-string">screen</span><span class="hljs-string"><span class="hljs-string">                  <a target="_blank" href="https://man7.org/linux/man-pages/man1/screen.1.html">Screen docs</a> </span></span>
+		<span class="hljs-string"><span class="hljs-string">systemd</span><span class="hljs-string"><span class="hljs-string">                 <a target="_blank" href="https://man7.org/linux/man-pages/man1/init.1.html">Systemd docs</a> </span></span>
+		<span class="hljs-string"><span class="hljs-string">python3</span><span class="hljs-string"><span class="hljs-string">                 <a target="_blank" href="https://docs.python.org/3/">Python3 docs</a> </span></span>
+		<span class="hljs-string"><span class="hljs-string">Mysql</span><span class="hljs-string"><span class="hljs-string">                   <a target="_blank" href="https://dev.mysql.com/doc/">Mysql docs</a> </span></span>
+		<span class="hljs-string"><span class="hljs-string">VodkaInstanceManager</span><span class="hljs-string"><span class="hljs-string">                
+	</code></pre>
+						</div>
+
+
+						</p>
+					</section><!--//section-->
+					<section class="docs-section" id="item-2-2">
+						<h2 class="section-heading">Linux Packages</h2>
+
+						lets first make sure our packages are upto date
+						<br class="pb-2"></br>
+						<div class="text-center"><code> sudo apt update && sudo apt upgrade</code></div>
+						<br class="pb-2"></br>
+						then we need to install the screen, lsof and systemd packages we can do this with a 1 liner, the
+						-y flag at the end will tell it to just accept and install each package
+						without having to press y and enter to install each package
+						<br class="pb-2"></br>
+						<div class="text-center"><code>sudo apt install screen lsof systemd wget -y</code></div>
+
+
+						</p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-2-3">
+						<h2 class="section-heading">Python</h2>
+						<p>
+							we are going validate if python3 is installed, python should be
+							standard on 99.9% of linux distributions but if you have a minimal version
+							of the distro you may not have python3 installed
+							<br class="pb-2"></br>
+							so there is 2 ways to validate package installation the first was is via dkpg and the second
+							is via apt you can choose which either one you want
+							<br class="pb-2"></br>
+							we can run this dpkg command:
+							<br class="pb-2"></br>
+						<div class="text-center"><code>dpkg -S python3 | grep /usr/bin</code></div>
+						<br class="pb-2"></br>
+						<div class="install-lightbox mb-3">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/dkpg_python3.png"><img
+										class="figure-img img-fluid shadow rounded" src="assets/images/dkpg_python3.png"
+										alt="" title="Dkpg Python3" /></a>
+							</div>
+
+						</div><!--//gallery-->
+						<br class="pb-2"></br>
+						or we can run this apt command:
+						<br class="pb-2"></br>
+						<div class="text-center"><code>apt list --installed | grep python3</code></div>
+						<br class="pb-2"></br>
+
+						<div class="install-lightbox mb-3">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/apt_python3.png"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/apt_python3.png" alt="" title="Dkpg Python3" /></a>
+							</div>
+
+						</div><!--//gallery-->
+
+
+
+
+						<br class="pb-2"></br>
+						if you have outputs similar to the above then you have python installed, if you do not have
+						outputs like the above then we need to install python
+						<br class="pb-2"></br>
+						<div class="callout-block callout-block-danger me-1">
+							<div class="content">
+								<h3 class="callout-title">
+									<span class="callout-icon-holder">
+										<i class="fas fa-exclamation-triangle"></i>
+									</span><!--//icon-holder-->
+									Warning!
+								</h3>
+								<p class="text-center">Only continue if you <strong>DO NOT </strong> already have python
+									installed! </p>
+							</div><!--//content-->
+						</div>
+
+
+						<br class="pb-2"></br>
+						before we start we need to install the dependencies for building python, i have added the -y flag
+						at the end of this command this will just ensure you don't have to press y and enter for every
+						package
+						prompt
+						<br class="pb-2" id="linux_chain_commands"></br>
+						<code>sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev -y</code>
+						<br class="pb-2"></br>
+						In linux we can chain commands together in the command line using the different operators && ||
+						;
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="hljs">
+A || B Run B if A failed
+A && B Run B if A succeeded
+A ; B Run A and then B, regardless of A outcome
+</code></pre>
+						</div>
+
+						With this knowledge we are going to create python directory, download python zip, extract and
+						move to the
+						new extracted python directory with 1 line however you could run all these
+						commands individually but for me that is effort and i like shortcuts where i can take them
+						<br class="pb-2"></br>
+						<code>mkdir ~/python310 && cd ~/python310 && wget https://www.python.org/ftp/python/3.10.0/Python-3.10.0.tgz && tar -xf Python-3.10.*.tgz && cd Python-3.10.*/</code>
+						<br class="pb-2"></br>
+
+						now that we have the files download we need to run the configure command to check if the
+						required dependencies are available with the –enable-optimizations flag is used to optimize the
+						binary -prefix is to set the directory and --with-ensurepip makes sure we have the pip package
+						manager installed
+						<br class="pb-2"></br>
+
+						<div class="text-center">
+							<code>./configure --enable-optimizations --prefix=/usr/bin --with-ensurepip=install</code>
+						</div>
+
+						<br class="pb-2"></br>
+						you should get an output like the following:
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="hljs">
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for python3.10... no
+checking for python3... python3
+checking for --enable-universalsdk... no
+checking for --with-universal-archs... no
+checking MACHDEP... "linux"
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables...
+.........
+configure: creating ./config.status
+config.status: creating Makefile.pre
+config.status: creating Misc/python.pc
+config.status: creating Misc/python-embed.pc
+config.status: creating Misc/python-config.sh
+config.status: creating Modules/ld_so_aix
+config.status: creating pyconfig.h
+creating Modules/Setup.local
+creating Makefile
+</code></pre>
+						</div>
+						<br class="pb-2"></br>
+						Now that we have finished the check, we want to now build python we can just run the make
+						command but if we have more than 1 core it will be faster to specify core count
+						<br class="pb-2"></br>
+						if you don't know how many cores your machine has you can run the following command:
+						<br class="pb-2"></br>
+						<div class="text-center"><code>nproc</code></div>
+						<br class="pb-2"></br>
+						<div class="install-lightbox mb-3 text-center">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/nproc.png"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/nproc.png" alt="" title="nproc" /></a>
+							</div>
+
+						</div><!--//gallery-->
+
+						<br class="pb-2"></br>
+						now to build python we can add -j to the make command and we can specify how many cores we want
+						it to use
+						in the image above you can see i have 4 cores, so when i am going to set the build flag i will
+						add 4 however this will be
+						different for your system so specify your number of cores
+						<br class="pb-2"></br>
+						<div class="text-center"><code>sudo make -j 4</code></div>
+
+						<br class="pb-2"></br>
+						once make is complete you should have the following output:
+						<br class="pb-2"></br>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="hljs">
+.................
+changing mode of build/scripts-3.10/pydoc3 from 644 to 755
+changing mode of build/scripts-3.10/idle3 from 644 to 755
+changing mode of build/scripts-3.10/2to3 from 644 to 755
+renaming build/scripts-3.10/pydoc3 to build/scripts-3.10/pydoc3.10
+renaming build/scripts-3.10/idle3 to build/scripts-3.10/idle3.10
+renaming build/scripts-3.10/2to3 to build/scripts-3.10/2to3-3.10
+gcc -pthread -c -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall    -fno-semantic-interposition -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -Werror=implicit-function-declaration -fvisibility=hidden -fprofile-use -fprofile-correction -I./Include/internal  -I. -I./Include    -DPy_BUILD_CORE -o Programs/_testembed.o ./Programs/_testembed.cgcc -pthread   -fno-semantic-interposition  -Xlinker -export-dynamic -o Programs/_testembed Programs/_testembed.o libpython3.10.a -lcrypt -lpthread -ldl  -lutil -lm   -lm 
+make[1]: Leaving directory '/home/debian/Python-3.10.0'
+</code></pre>
+						</div>
+
+						<br class="pb-2"></br>
+						now we need to install the program using altinstall, we are using this just incase you may have
+						python already that way we will no overwrite the previous install
+						of python
+						<br class="pb-2"></br>
+						<div class="text-center"><code>sudo make altinstall</code></div>
+						<br class="pb-2"></br>
+
+						once this command has finished doing everything you will want to verify the install
+						<br class="pb-2"></br>
+						<div class="text-center"><code>python3.10 --version</code></div>
+						<br class="pb-2"></br>
+						if this returns python3.10.0 congrats you have successfully built python from source!
+						<br class="pb-2"></br>
+						<div class="callout-block callout-block-warning">
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder me-1">
+										<svg class="svg-inline--fa fa-bullhorn" aria-hidden="true" focusable="false"
+											data-prefix="fas" data-icon="bullhorn" role="img"
+											xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+											<path fill="currentColor"
+												d="M480 179.6C498.6 188.4 512 212.1 512 240C512 267.9 498.6 291.6 480 300.4V448C480 460.9 472.2 472.6 460.2 477.6C448.3 482.5 434.5 479.8 425.4 470.6L381.7 426.1C333.7 378.1 268.6 352 200.7 352H192V480C192 497.7 177.7 512 160 512H96C78.33 512 64 497.7 64 480V352C28.65 352 0 323.3 0 288V192C0 156.7 28.65 128 64 128H200.7C268.6 128 333.7 101 381.7 53.02L425.4 9.373C434.5 .2215 448.3-2.516 460.2 2.437C472.2 7.39 480 19.06 480 32V179.6zM200.7 192H192V288H200.7C280.5 288 357.2 317.8 416 371.3V108.7C357.2 162.2 280.5 192 200.7 192V192z">
+											</path>
+										</svg><!-- <i class="fas fa-bullhorn"></i> Font Awesome fontawesome.com -->
+									</span><!--//icon-holder-->
+									Note!
+								</h4>
+								<p>if you have an error or something has not worked this would be the time to reach out
+									on discord so i can assist you further</p>
+							</div><!--//content-->
+						</div>
+
+
+
+
+
+
+						</p>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-2-4">
+						<h2 class="section-heading">Mysql</h2>
+						<br class="pb-2"></br>
+						<div class="callout-block callout-block-danger me-1">
+							<div class="content">
+								<h3 class="callout-title">
+									<span class="callout-icon-holder">
+										<i class="fas fa-exclamation-triangle"></i>
+									</span><!--//icon-holder-->
+									Warning!
+								</h3>
+								<p class="text-center"> If you already have MariaDB on your system then first remove
+									this first before installing mysql server </p>
+							</div><!--//content-->
+						</div>
+						<br class="pb-2"></br>
+
+						The best and easiest way to install mysql server is via the official mysql distribution packages,
+						the command below will cd to home directory and download
+						the debian package file
+						<br class="pb-2"></br>
+						<div class="text-center">
+							<code>cd ~/ && wget https://dev.mysql.com/get/mysql-apt-config_0.8.20-1_all.deb</code>
+						</div>
+						<br class="pb-2"></br>
+						now that we have downloaded the deb package file we can install and configure it using the
+						following command
+						<br class="pb-2"></br>
+						<div class="text-center"><code>sudo apt install ./mysql-apt-config_*_all.deb</code></div>
+						<br class="pb-2"></br>
+						After you have run the above command there will be a series of screens to navigate through
+						<br class="pb-2"></br>
+
+						<ul>
+							<li><strong class="me-1">TAB:</strong> change the selection movement on the screen up and
+								down</li>
+							<li><strong class="me-1">ENTER:</strong> to select the highlighted object</li>
+
+						</ul>
+
+						select <strong>MySQL Server & Cluster</strong> then press the <strong>TAB</strong> button to
+						select OK and hit then the <strong>ENTER</strong> key
+						<br class="pb-2"></br>
+						<div class="install-lightbox mb-3 text-center">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/mysql_choice.png"><img
+										class="figure-img img-fluid shadow rounded" src="assets/images/mysql_choice.png"
+										alt="" title="choice 1" /></a>
+							</div>
+
+						</div><!--//gallery-->
+						<br class="pb-2"></br>
+
+						select the available version of MySQL Server here it is myslq-8.0 after that use the
+						<strong>TAB</strong> to select OK and hit the <strong>Enter </strong>key
+
+
+						<br class="pb-2"></br>
+						<div class="install-lightbox mb-3 text-center">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/mysql_choice_1.png"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/mysql_choice_1.png" alt="" title="choice 2" /></a>
+							</div>
+
+						</div><!--//gallery-->
+						<br class="pb-2"></br>
+
+						again Select OK and then use the <strong>TAB</strong> to move to OK and hit the
+						<strong>Enter</strong> key.
+
+						<br class="pb-2"></br>
+						<div class="install-lightbox mb-3 text-center">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/mysql_choice_3.png"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/mysql_choice_3.png" alt="" title="choice 3" /></a>
+							</div>
+
+						</div><!--//gallery-->
+
+
+						<br class="pb-2"></br>
+
+						ok now the debian package is now configured/installed we need to update the system before we
+						install
+						<br class="pb-2"></br>
+						<div class="alert alert-success text-center" role="alert">
+							<h5>** if you are smart you can chain commands <a href="#linux_chain_commands">click
+									here</a> for more info **</h5>
+						</div>
+						<div class="text-center" id="learning-linux-show-me-answer">
+							<div class="btn btn-secondary"><i class="fas fa-book me-2"></i> Show Chained Answer</div>
+						</div>
+
+						<div id="easter-egg">
+							<br class="pb-2"></br>
+							<div class="text-center"><code>sudo apt update && install mysql-server</code></div>
+							<br class="pb-2"></br>
+						</div>
+
+
+						<br class="pb-2"></br>
+						Lets update our system to get the updated package list now that we have added the new repo
+						<br class="pb-2"></br>
+						<div class="text-center"><code>sudo apt update</code></div>
+						<br class="pb-2"></br>
+						now that we have updated out system we can now do a mysql install run the following command:
+						<br class="pb-2"></br>
+						<div class="text-center"><code>sudo apt install mysql-server</code></div>
+						<br class="pb-2"></br>
+						<div class="install-lightbox mb-3 text-center">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/mysql_install.png"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/mysql_install.png" alt="" title="mysql install" /></a>
+							</div>
+
+						</div><!--//gallery-->
+
+						enter the password that you want to use with the MySQL server and then select the Strong
+						authentication method
+
+						<br class="pb-2"></br>
+						<div class="install-lightbox mb-3 text-center">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/mysql_password_install.png"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/mysql_password_install.png" alt="" title="password install" /></a>
+							</div>
+
+						</div><!--//gallery-->
+						<br class="pb-2"></br>
+						next we will secure the mysql installation remove the demo database, disallow remote root login
+						and remove anonymous users
+
+						run the following command
+						<br class="pb-2"></br>
+						<div class="text-center"><code>sudo mysql_secure_installation</code></div>
+						<br class="pb-2"></br>
+
+						Once the installation is completed we can enable the MySQL service so that it could start
+						automatically with system boot
+						<div class="text-center"><code>sudo systemctl enable --now mysql</code></div>
+						<br class="pb-2"></br>
+
+
+						<div class="callout-block callout-block-warning me-1">
+							<div class="content">
+								<h3 class="callout-title">
+									<span class="callout-icon-holder">
+										<i class="fas fa-exclamation-triangle"></i>
+									</span><!--//icon-holder-->
+									Caution!
+								</h3>
+								<p class="text-center"> This next part is advised but not essential </p>
+							</div><!--//content-->
+						</div>
+
+						<br class="pb-2"></br>
+						now that we have setup our mysql database we should be able to connect into it with the user
+						root and the secure password you have setup
+						<br class="pb-2"></br>
+						because we disallowed remote connections for root, we will want to create a new user and grant
+						it permissions to connect locale and remote
+						we should never connect with root on remote
+
+						<br class="pb-2"></br>
+						before we can add a user we need to connect to the database after pressing enter it will prompt
+						you to enter your password
+						<div class="text-center"><code>mysql -u root -p</code></div>
+
+
+						<br class="pb-2"></br>
+						now we can create the <strong>LOCAL</strong> user with this command, replace the_username and
+						the_password with what you want your username to be
+						and what you want your password to be.
+						<br class="pb-2"></br>
+						<div class="text-center">
+							<code>CREATE USER 'the_username'@'localhost' IDENTIFIED BY 'the_password';</code>
+						</div>
+
+						<br class="pb-2"></br>
+						now we can create the <strong>REMOTE</strong> user with this command, replace the_username and
+						the_password with what you want your username to be
+						and what you want your password to be.
+						<br class="pb-2"></br>
+						<div class="text-center">
+							<code> CREATE USER 'the_username'@'%' IDENTIFIED BY 'the_password';</code>
+						</div>
+						<br class="pb-2"></br>
+						now that we have setup local and remote user we need to give it permissions we can do it with
+						the following commands replace the_username with the
+						username that you setup in previous commands.
+						<br class="pb-2"></br>
+						<div class="text-center"><code> GRANT ALL ON *.* TO 'the_username'@'localhost';</code></div>
+						<br class="pb-2"></br>
+						<div class="text-center"><code> GRANT ALL ON *.* TO 'the_username'@'%';</code></div>
+						<br class="pb-2"></br>
+						now we need to tell the database to refresh its permissions for the new user permissions that we
+						have setup
+						<br class="pb-2"></br>
+						<div class="text-center"><code> FLUSH PRIVILEGES;</code></div>
+
+
+
+					</section><!--//section-->
+					<section class="docs-section" id="item-2-5">
+						<h2 class="section-heading">API</h2>
+						<br class="pb-2"></br>
+						You should have the following folder structure
+						<br class="pb-2"></br>
+						<div class="API-lightbox mb-3">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/API_filestructure.png"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/API_filestructure.png" alt=""
+										title="API File Structure" /></a>
+							</div>
+
+						</div><!--//gallery-->
+						<br class="pb-2"></br>
+						the first thing you will want to do is install the required PIP packages
+						you can do this manually or use the following command
+						<br class="pb-2"></br>
+						<div class="text-center"><code>pip install -r requirements.txt</code></div>
+						<br class="pb-2"></br>
+						if you are looking to do this manually you can open the requirements.txt file and find the
+						version and package name to be installed.
+
+						<br class="pb-2"></br>
+						the next thing we are going to need to do is configure our config file to meet your servers
+						needs
+						<br class="pb-2"></br>
+						<h5>Config File:</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="python hljs">
+Master_Password = "hello"
+Max_Players = 64
+Soft_Cap = 10
+
+### web server connection
+
+AppSecretKey = ""  ## setup a secure private key for storing session data
+IP = ""
+Port = 8090
+Debug = True  ### set this to false on live env because running debug is danger
+
+### mysql connection
+Host = ""
+Database = ""
+Username = ""
+Password = ""
+
+### updates
+Folder = "game_build"  ## folder name of where you upload your build
+
+### this is the secret key to allow servers to be added to 
+###the database make sure this matches with your ServiceInstance key
+ServerAddSecretKey = ""
+
+</code></pre>
+						</div><!--//docs-code-block-->
+						<br class="pb-2"></br>
+						<code>Master_Password</code>(string) is the password to connect into the admin panel
+
+						<br class="pb-2"></br>
+						<code>Max_Players</code>(int) Max Players allowed in an instance
+						<br class="pb-2"></br>
+						<code>Soft_Cap</code>(int) when the player count reaches this softcap it will spin up a new
+						server for when max players is reached
+
+						<br class="pb-2"></br>
+						<code>AppSecretKey</code>(string) this is a secure key to encrypt session data
+						<br class="pb-2"></br>
+						<code>IP</code>(string) ip address of hostname for web server to bind to
+						<br class="pb-2"></br>
+						<code>Port</code>(int) the port you want to spawn the web service on
+						<br class="pb-2"></br>
+						<code>Debug</code>(Bool) True or False, only enable debug true for development/testing as this
+						will expose full stack on error <strong>do not</strong> use in production
+						<br class="pb-2"></br>
+						<code>Host</code>(string) host address of mysql database, either localhost or ip
+						<br class="pb-2"></br>
+						<code>Database</code>(string) database name to connect to
+						<br class="pb-2"></br>
+						<code>Username</code>(string) username for connecting to the database
+						<br class="pb-2"></br>
+						<code>Password</code>(string) password for connecting to the database
+						<br class="pb-2"></br>
+						<code>Folder</code>(string) name of the folder to create and use for when you upload a game
+						build via the admin panel
+						<br class="pb-2"></br>
+						<code>ServerAddSecretKey</code>(string) this key is used to validated the API is not being used
+						by people who should not have access
+
+
+
+						<br class="pb-2" id="as_service"></br>
+						<div class="callout-block callout-block-warning me-1">
+							<div class="content">
+								<h3 class="callout-title">
+									<span class="callout-icon-holder">
+										<i class="fas fa-exclamation-triangle"></i>
+									</span><!--//icon-holder-->
+									NOTE!
+								</h3>
+								<p class="text-center"> Adding a service part is advised but not essential if you are
+									not going to run as a service skip ahead by clicking <a
+										href="#not_as_service">here</a> </p>
+							</div><!--//content-->
+						</div>
+						<br class="pb-2"></br>
+						<h5>Service:</h5>
+						if you want to be able to start your program on system restart or start/stop the program easily
+						using system commands then you should continue with this setup
+						if not then skip this step
+						<br class="pb-2"></br>
+						the first thing we want to to is modify the vodka_api.service
+						<br class="pb-2"></br>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="bash hljs">[Unit]
+Description=API for Vodka Instance Manager
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python3 /home/your path here/ServerInstanceManagerWebApi/main.py
+User=debian
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+						</div><!--//docs-code-block-->
+						<br class="pb-2"></br>
+						so the part of this script we will want to modify is the ExecStart path and the User the path
+						should be the full relative path to the main.py
+						in the ServerInstanceManagerWebApi folder, if you are unsure on the full path navigate to the
+						directory where this file is located on your linux machine
+						and run the command
+						<br class="pb-2"></br>
+						<div class="text-center"><code>pwd</code></div>
+						<br class="pb-2"></br>
+						this will output the full path which you can copy and place <strong>/home/your path
+							here/ServerInstanceManagerWebApi/main.py</strong>
+						with your system path and remember to have the /main.py on the end.
+						<br class="pb-2"></br>
+						now that you have changed the system path you will also want to change the User, this user will
+						be the owner of the process so be careful what you set this to
+						i would not advise root for me i used the user debian however you can set this to any user you
+						have setup on your system
+						<div class="text-center"><code>User=change your user</code></div>
+						<br class="pb-2"></br>
+						now that we have setup the service file we need to copy it to our system folder so the system
+						know about this new program to be run as a daemon
+						<br class="pb-2"></br>
+						<div class="text-center">
+							<code>sudo cp vodka_api.service /etc/systemd/system/vodka_api.service</code></div>
+						<br class="pb-2"></br>
+						now we need to reload to pick up our new service
+						<br class="pb-2"></br>
+						<div class="text-center"><code>sudo systemctl daemon-reload</code></div>
+						<br class="pb-2"></br>
+						if you want the system to auto start the script on system boot/reboot run the following command
+						<br class="pb-2"></br>
+						<div class="text-center"><code>sudo systemctl enable vodka_api.service</code></div>
+						<br class="pb-2"></br>
+						if you have already got this running on boot/reboot and you want to disable it from autostart
+						you can run the following
+						<br class="pb-2"></br>
+						<div class="text-center"><code>sudo systemctl disable vodka_api.service</code></div>
+
+						<br class="pb-2"></br>
+						so now that we have our service setup and configured we can now use this to start/stop/restart
+						to manage the process
+						<br class="pb-2"></br>
+						<div class="text-center"><code>sudo service vodka_api start</code></div>
+						<br class="pb-2"></br>
+						<div class="text-center"><code>sudo service vodka_api stop</code></div>
+						<br class="pb-2"></br>
+						<div class="text-center"><code>sudo service vodka_api restart</code></div>
+						<br class="pb-2"></br>
+						if we need to find out what is going on with this service we can request status and get an
+						output
+						<br class="pb-2"></br>
+						<div class="text-center"><code>sudo service vodka_api status</code></div>
+						<br class="pb-2"></br>
+						<div class="API-lightbox mb-3">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/service_status.png"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/service_status.png" alt=""
+										title="Service Status Response" /></a>
+							</div>
+
+						</div><!--//gallery-->
+
+						<br class="pb-2" id="not_as_service"></br>
+						<div class="callout-block callout-block-warning me-1">
+							<div class="content">
+								<h3 class="callout-title">
+									<span class="callout-icon-holder">
+										<i class="fas fa-exclamation-triangle"></i>
+									</span><!--//icon-holder-->
+									NOTE!
+								</h3>
+								<p class="text-center"> if you want to run it as a service click <a
+										href="#as_service">HERE</a> however the following steps are for those who want
+									to run the system manually </p>
+							</div><!--//content-->
+						</div>
+
+						<h5>Not As Service:</h5>
+						<br class="pb-2"></br>
+						You will want to navigate to the directory of the ServerInstanceManagerWebApi on your system and
+						then you will want to run the following command where python3 is your python version
+						for me python3 is my association
+
+						<br class="pb-2"></br>
+						<div class="text-center"><code>python3 main.py</code></div>
+
+						<br class="pb-2"></br>
+						<div class="API-lightbox mb-3">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/start_api_manually.png"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/start_api_manually.png" alt=""
+										title="Manual API Starting" /></a>
+							</div>
+
+						</div><!--//gallery-->
+						<br class="pb-2"></br>
+						if you have debug enabled you will see double output like above, if you are not running debug
+						mode you will see single output
+
+
+						<br class="pb-2"></br>
+						to stop the program use <strong>CTRL</strong> + <strong>C</strong>
+
+						<br class="pb-2"></br>
+						running the program this way will only work whilst you have a putty or ssh connection to system
+						if you want this to continue to run the program
+						you can either set it as a background process or use screen to create a screen session, i prefer
+						screen due to the fact that i get a new interactive
+						terminal (useful for tracking previous commands) and can kill the session rather easily where
+						as with setting process in background
+						you have to use ps to find process id to then kill process however if you do
+						not disconnect from putty/terminal session then you can use the command fg command which will
+						bring the process back to the foreground
+						where you can use ctl+c to quit, something to also note fg command is not always reliable and
+						is better in some distro's than others
+						my personal experience with it is not great but some people swear by it so i offer both
+						solutions.
+						<br class="pb-2"></br>
+						<h5>Background process:</h5>
+						<br class="pb-2"></br>
+						<div class="text-center"><code>(python3 main.py &)</code></div>
+
+						<br class="pb-2"></br>
+						to kill background process (if fg works):
+						<br class="pb-2"></br>
+						<div class="text-center"><code>fg </code></div>
+						<br class="pb-2"></br>
+						if fg works then it will bring the application up and you can press control+c to terminate it
+						<br class="pb-2"></br>
+						if fg does not work then we need to find process id and kill it the second column is the process
+						id and in my example image that is 10990
+						<br class="pb-2"></br>
+						<div class="text-center"><code>ps -aux | grep main.py </code></div>
+						<br class="pb-2"></br>
+						<div class="API-lightbox mb-3">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/ps_aux_main_py.png"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/ps_aux_main_py.png" alt="" title="Finding Process" /></a>
+							</div>
+
+						</div><!--//gallery-->
+						now we know the process id we can now kill it so replace 10990 with the process id for your
+						process
+						<br class="pb-2"></br>
+						<div class="text-center"><code>kill -9 10990 </code></div>
+						<br class="pb-2"></br>
+						<h5>Screen (easier way):</h5>
+						the following command creates an interactive shell make sure to the relative path to your python
+						and directory for the API
+
+						<div class="text-center">
+							<code>screen -S vodka_API -d -m /usr/bin/python3 /home/debian/new_build_test/ServerInstanceManagerWebApi/main.py</code>
+						</div>
+
+						<br class="pb-2"></br>
+						<code>-S</code> - gives the option to name the session
+						<br class="pb-2"></br>
+						<code>-d</code> - tells it to spawn detached
+						<br class="pb-2"></br>
+						<code>-m</code> - creates new session regardless of being within a screen session
+						<br class="pb-2"></br>
+						we can list screens by running the command
+
+						<div class="text-center"><code>screen -ls</code></div>
+						<br class="pb-2"></br>
+						<div class="API-lightbox mb-3">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/screen_ls.png"><img class="figure-img img-fluid shadow rounded"
+										src="assets/images/screen_ls.png" alt="" title="Screen LS" /></a>
+							</div>
+
+						</div><!--//gallery-->
+
+						<br class="pb-2"></br>
+						we can connect into the screen with screen -x (name of screen)
+						<br class="pb-2"></br>
+						<div class="text-center"><code>screen -X vodka_API</code></div>
+
+
+						<br class="pb-2"></br>
+						to leave the screen after using screen -x you press <strong>CTRL</strong> + <strong>A</strong>
+						and then after this you press <strong>CTRL</strong> + <strong>D</strong>
+
+						this will allow you to leave the session and keep process running
+
+						<br class="pb-2"></br>
+						if you want to kill the screen session you can do the following but change vodka_API to the
+						session name
+
+						<br class="pb-2"></br>
+						<div class="text-center"><code>screen -XS vodka_API quit</code></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					</section><!--//section-->
+					<section class="docs-section" id="item-2-6">
+						<h2 class="section-heading">Instance Launcher</h2>
+						The instance launcher is the part of the system which requests data from the API and does
+						actions based on the response ideally you would have this running this on
+						all your separate servers from the api but you can also run these on the same server
+						<br class="pb-2"></br>
+						When the program is first launched it does a request to the API with the ServerAddSecretKey
+						which was setup in the API config file, if this request matches
+						the API's config it will add the ip address to the list of dedicated servers it will then check
+						to see if there is a new download and compares the response
+						to the local file if the response if different then it will download the new build and extract
+						it.
+
+
+						<br class="pb-2"></br>
+						You should have the following folder structure for the instance manager
+						<br class="pb-2"></br>
+						<div class="API-lightbox mb-3">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/Manager_filestructure.png"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/Manager_filestructure.png" alt=""
+										title="Instance Manager File Structure" /></a>
+							</div>
+
+						</div><!--//gallery-->
+						<br class="pb-2"></br>
+						the first thing you will want to do is install the required PIP packages for the instance
+						manager
+						you can do this manually or use the following command
+						<br class="pb-2"></br>
+						<div class="text-center"><code>pip install -r requirements.txt</code></div>
+						<br class="pb-2"></br>
+						if you are looking to do this manually you can open the requirements.txt file and find the
+						version and package name to be installed.
+
+						<br class="pb-2"></br>
+						the next thing we are going to need to do is configure our config file to meet your servers
+						needs
+						<br class="pb-2"></br>
+						<h5>Config File:</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="python hljs">
+Max_Players = 64
+Dedicated_Server_Folder = "~/my_build_test_directory/"
+Dedicated_Server_Location = "~/my_build_test_directory/Server.sh"  # location to game server build
+Domain = ""  # enter domain or ip here of api
+Port = "8090"
+Starting_Port = 7777  # default port to start on
+Max_Instances = 5  # max number of instances on this server
+steam = False  # use steam or not
+log = True  # logging
+
+## this is only for startup map so if this server script is running on this script will load initial map so players
+## dont need to wait on map spinups
+
+onload_map_start = True
+onload_map = "ThirdPersonExampleMap"
+
+## this must be same as server instance api key for this to be added to database...
+ServerAddSecretKey = "IamASecretKeyWooo!"
+</code></pre>
+						</div><!--//docs-code-block-->
+
+						<br class="pb-2"></br>
+						<code>Max_Players</code>(int) Max number of players per instance
+
+						<br class="pb-2"></br>
+						<code>Dedicated_Server_Folder</code>(string) Folder in which the the game build will be extracted to
+						if the folder structure doesn't exist the program will create it
+						<br class="pb-2"></br>
+						<code>Dedicated_Server_Location</code>(string) Path to where the executable will be located, i will be updating this in future releases to 
+						stream line this further.
+
+						<br class="pb-2"></br>
+						<code>Domain</code>(string) this will either be domain.com or domain.org or ip address were the api is hosted.
+						<br class="pb-2"></br>
+						<code>Port</code>(int) the port the API is listening on (get this from you api config file)
+						<br class="pb-2"></br>
+						<code>Starting_Port</code>(int) this is the port number the unreal engine servers will start at and increment so if your running 10 servers 
+						it will start at port 7777 for the first instance created, the next instance would be 7778 and so on until it reached its final max of 10 servers 
+						being port 7787
+						<br class="pb-2"></br>
+						<code>Max_Instances</code>(int) the maximum allowed instances for this server
+						<br class="pb-2"></br>
+						<code>steam</code>(bool) are you using the steam subsystem? True or False
+						<br class="pb-2"></br>
+						<code>log</code>(bool) enable output log for UE True or False
+						
+						<br class="pb-2"></br>
+						<code>onload_map_start</code>(bool) True or False to auto start a map on script startup
+						<br class="pb-2"></br>
+						<code>onload_map</code>(string) if onload_map_start is true it will load this map on script start, in future versions this will be an array of maps to start
+						more than one instance
+						<br class="pb-2"></br>
+						<code>ServerAddSecretKey</code>(string) this key is used to validated the API is not being used
+						by people who should not have access this should be the same as the key in the API config
+
+					</section><!--//section-->
+				</article><!--//docs-article-->
+
+				
+
+
+				<article class="docs-article" id="section-3">
+					<header class="docs-header">
+						<h1 class="docs-heading">API</h1>
+						<section class="docs-intro">
+							<p>This is all the possible end points you can comminate with and the parameters which they
+								take with a description on what they do</p>
+							<p>All routes are handled in the <code>main.py</code> file and each route will call a corresponding function in the <code>server.py</code> file
+								this was my attempt at trying to keep code organized however this will no doubt change in the future and docs will be updated to reflect these changes
+							</p>
+							<p>Lets take a look at an example </p>
+							<h5>This it the Main.py and we are looking at the route create (example.com:8090/create)</h5>
+							<pre class="shadow-lg rounded"><code class="python hljs">
+## this route is to create instance in database
+@app.route("/create")
+def create():
+args = request.args
+server_ip = args['ip']
+map_name = args['map']
+port = args['port']
+return server.create(connection, cursor, server_ip, map_name, port)								
+</code></pre>
+
+<p>We define a wrapper <code>@app.route</code> with the value of /create and assign a function called create to this wrapper </p>
+<p>
+	we then fetch the parameters and because this one is handled as a get request we use <code>request.args</code> to get the parameters, further in the code you will see me use
+	<code>request.form</code> for POST requests and <code>request.json</code> for POST json requests 
+	anyway i store each value to a variable (you don't need to do this but i find it easier to read) and pass these values to the <code>server.create()</code> function
+	<br class="pb-2">
+	if you are creating your own functions you will want to pass the connection and cursor values to the function if you are doing any database related stuff
+	<br class="pb-2">
+	
+
+</p>
+<div class="callout-block callout-block-warning me-1">
+	<div class="content">
+		<h3 class="callout-title">
+			<span class="callout-icon-holder">
+				<i class="fas fa-exclamation-triangle"></i>
+			</span><!--//icon-holder-->
+			INFO!
+		</h3>
+		<p class="text-center">
+			 A get request is data which is obtained from the url an example of this would be
+			 <br class="pb-2">
+			 example.com/create?name=test&lastname=test2
+			 <br class="pb-2">
+			 and in our code we could access this 
+			 <br class="pb-2">
+			 <br class="pb-2">
+			 args = request.args
+			 <br class="pb-2">
+			 firstname = args['name']
+			 <br class="pb-2">
+			 surname = args['lastname']
+			 <br class="pb-2">
+
+			 A Post request sends the data in the body of the request and the only way we can really visualize this is with a inspection tool like telerik inspector 
+			 or chrome/mozzilla dev tools to analyze the request, i will expand on this in the future with more info
+		</p>
+	</div><!--//content-->
+</div>
+							
+
+
+						</section><!--//docs-intro-->
+					</header>
+					<section class="docs-section" id="item-3-1">
+						<h2 class="section-heading">/create(ip, map, port) {GET REQUEST} </h2>
+						<br class="pb-2">
+						<h3>Calls <code>create</code> in server.py</h3>
+						<br class="pb-2">
+						params for create <code>(database connection, database cursor cursor, server ip, map name, port)</code>
+						<br class="pb-2">
+						<br class="pb-2">
+						<h3>Description:</h3>
+						<br class="pb-2">
+						this api route is called by the c++ function inside the gamemode to tell the database that this server is up and running 
+						it will add the server to the list of servers in the database
+
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-3-2">
+						
+						<h2 class="section-heading">/delete (ip, map, port) {GET REQUEST} </h2>
+						<br class="pb-2">
+						<h3>Calls <code>delete</code> in server.py</h3>
+						<br class="pb-2">
+						params for delete <code>(database connection,database cursor, server ip, port)</code>
+						<br class="pb-2">
+						<br class="pb-2">
+						<h3>Description:</h3>
+						<br class="pb-2">
+						this api route is called  from the console when deleting a server via console commands
+
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-3-3">
+						<h2 class="section-heading">/masterdelete (password) {GET REQUEST} </h2>
+						<br class="pb-2">
+						<h3>Calls <code>master_delete</code> in server.py</h3>
+						<br class="pb-2">
+						params for master_delete <code>(connection, cursor, password)</code>
+						<br class="pb-2">
+						<br class="pb-2">
+						<h3>Description:</h3>
+						<br class="pb-2">
+						this api route is called from the console command when deleting all servers and requires the admin password from the config file 
+						to delete all servers
+
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-3-4">
+						<h2 class="section-heading">/deleteconsolerequest no params {GET REQUEST} </h2>
+						<br class="pb-2">
+						<h3>Calls <code>delete_all_console</code> in server.py</h3>
+						<br class="pb-2">
+						params for delete_all_console <code>(connection, cursor, get the ip of from the web request)</code>
+						<br class="pb-2">
+						<br class="pb-2">
+						<h3>Description:</h3>
+						<br class="pb-2">
+						this is called from the instance manager and is called via the killall console command
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-3-5">
+						<h2 class="section-heading">/request_player_server (map_name) {GET REQUEST} </h2>
+						<br class="pb-2">
+						<h3>Calls <code>request_player_server</code> in server.py</h3>
+						<br class="pb-2">
+						params for request_player_server <code>(connection, cursor, sever ip)</code>
+						<br class="pb-2">
+						<br class="pb-2">
+						<h3>Description:</h3>
+						<br class="pb-2">
+						sent from actor in world from unreal engine, this will return a ip address and port to connect to 
+						<br> if no server exists for this map it will create this map and return ip/port 
+						<br> if server is at max players or at soft cap then it will also create a new server, 
+						<br> if max players then return the new created server ip port 
+						<br> if soft cap reached then it first ip port from database then request a new server instance to spawn
+
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-3-6">
+						<h2 class="section-heading">/spin_me_up no parameters in request </h2>
+						<br class="pb-2">
+						<h3>Calls <code>spin_up_server</code> in server.py</h3>
+						<br class="pb-2">
+						params for spin_up_server <code>(connection, cursor, ip from web request)</code>
+						<br class="pb-2">
+						<br class="pb-2">
+						<h3>Description:</h3>
+						<br class="pb-2">
+						this api route is for the instance manager, and returns if there is any waiting unreal engine instances to be spawned <br>
+						if there is a waiting instance it marked the instance as owned by the requested server ip <br>
+						this service works on a first come first serve, so 2 servers request spinup at same time first request to come through 
+						will get the message to spin up the server and second server would get the response no server to spin up
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-3-7">
+						<h2 class="section-heading">/spin_up_complete (port,map_name) {GET REQUEST} </h2>
+						<br class="pb-2">
+						<h3>Calls <code>spin_up_complete</code> in server.py</h3>
+						<br class="pb-2">
+						params for spin_up_complete <code>(connection, cursor,  ip from web request, port, map name)</code>
+						<br class="pb-2">
+						<br class="pb-2">
+						<h3>Description:</h3>
+						<br class="pb-2">
+						this is called from within the c++ game mode we know at this point the server should be connectable because we have a game mode 
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-3-8">
+						<h2 class="section-heading">/status [OPTIONAL] (id,status) {GET REQUEST} </h2>
+						<br class="pb-2">
+						<h3>Calls <code>status</code> in server.py</h3>
+						<br class="pb-2">
+						params for status <code>(connection, cursor, ip obtained from the web request, (optional status), (optional id)</code>
+						<br class="pb-2">
+						<br class="pb-2">
+						<h3>Description:</h3>
+						<br class="pb-2">
+						this is called from the instance manager to get actions to perform on the server or to update an action performed <br>
+						if there is no status and no id it will return an action to do  <br>
+						if there is a message and an id it will update this in the database with the message and id
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-3-9">
+						<h2 class="section-heading">/download_update {GET REQUEST} </h2>
+						<br class="pb-2">
+						<h3>Calls <code>download_update</code> in server.py</h3>
+						<br class="pb-2">
+						params for download_update<code>no params</code>
+						<br class="pb-2">
+						<br class="pb-2">
+						<h3>Description:</h3>
+						<br class="pb-2">
+						this is for downloading builds on newly added physical servers and for downloading new updates <br>
+						each copy of the service instance manager will run this request on startup or of the command is received to update <br>
+						the download_update function in server.py returns the newest file in the downloads directory and returns this as a streamed file
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-3-10">
+						
+						<h2 class="section-heading">/add_dedicated_server  no params for {GET REQUEST}  secret_key for {POST REQUEST} </h2>
+						<br class="pb-2">
+						<h3>Calls <code>add_dedicated_server</code> in server.py</h3>
+						<br class="pb-2">
+						params for add_dedicated_server<code>(connection, cursor, ip from request)</code>
+						<br class="pb-2">
+						<br class="pb-2">
+						<h3>Description:</h3>
+						<br class="pb-2">
+						this adds a new server to the database if secret key is in the post parameters<br>
+						before adding the server it will check if it already exists <br>
+						this is called from the instance manager
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-3-11">
+						
+						<h2 class="section-heading">/get_broadcast <code>DISABLED</code> </h2>
+						<br class="pb-2">
+						<h3>Currently  <code>DISABLED</code> </h3>
+						
+					</section><!--//section-->
+
+				</article><!--//docs-article-->
+
+				<article class="docs-article" id="section-4">
+					<header class="docs-header">
+						<h1 class="docs-heading">Instance Manager</h1>
+						<section class="docs-intro">
+							the instance manager is part of the system which creates our dedicated servers, it talks to our api and gets actions to perform such as start, stop, update,
+							update, reboot etc..
+							<br class="pb-2">
+							We have 3 scripts (not including config file) to manage the program 
+							<br class="pb-2">
+							<h3>Start.py</h3>
+							start.py is our entry point this is how we control everything and this is where we pass our arguments to do certain actions
+							<br class="pb-2">
+							<h3>instance_starter.py</h3>
+							parameters are passed to this script from start.py to start our unreal server instances 
+							<br class="pb-2">
+							<h3>instance_manager.py</h3>
+							This is either started manually by running instance_manager.py or if you pass the command start to start.py <code>python3 start.py start</code> then it will
+							start this script, the instance manager talks to the api and then tells start.py what to do with the action received.
+
+						</section><!--//docs-intro-->
+					</header>
+					<section class="docs-section" id="item-4-1">
+						<h2 class="section-heading">Console Commands</h2>
+						there is a range of console commands you can utilize to help configure,setup and manage your servers 
+						<br class="pb-2"></br>
+						to execute a console command you would run <code>python3 start.py [command here]</code>
+						<br class="pb-2"></br>
+						<code>no parameter provided</code> starts 1 unreal server based off of config file
+						<br class="pb-2"></br>
+						<code>help</code> shows list of commands
+						<br class="pb-2"></br>
+						<code>kill</code> you must provide a screen session name to kill
+						<br class="pb-2"></br>
+						<code>killall</code> this kills all current sessions
+						<br class="pb-2"></br>
+						<code>ls</code> lists current sessions
+						<br class="pb-2"></br>
+						<code>lsp</code> lists current sessions with extra data such as ports
+						<br class="pb-2"></br>
+						<code>startmap</code> you must provide a map name to start
+						<br class="pb-2"></br>
+						<code>start</code> starts the system + instance manager
+
+					</section><!--//section-->
+
+
+				</article><!--//docs-article-->
+
+				<article class="docs-article" id="section-5">
+					<header class="docs-header">
+						<h1 class="docs-heading">Integration</h1>
+						<section class="docs-intro">
+							<p>You can implement this in any way you wish and see fit. However, 
+								my recommendation would be to create it as a component that you attach to your game mode. 
+								Why game mode? Well, in the future, you can tie it into prelogin/postlogin pretty easily. 
+								The game mode is typically developed to be run on the server and replicated to clients, so for me,
+								 this just makes a logical place to put the code. </p>
+
+								 <p>The code itself is aimed towards blueprint developers, however you can further this in c++ if you wish and do http calls
+									from within c++, the reason i did not add this functionality is again to help blueprint developers being able to expand 
+									on this system from entirly in blueprints where they can use plugins like va-rest etc.. to do the http calls.
+										
+								
+								 </p>
+
+							
+
+
+							</p>
+						</section><!--//docs-intro-->
+					</header>
+					<section class="docs-section" id="item-5-1">
+						<h2 class="section-heading">Getting Started</h2>
+						<p>The first thing you want to do if create a component and to do this we are going to open unreal engine 
+							and select tools then click new c++ class
+						</p>
+						<div class="INT-lightbox mb-3">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/unreal_tools.jpg"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/unreal_tools.jpg" alt=""
+										title="Tools option" /></a>
+							</div>
+
+						</div><!--//gallery-->
+						
+						<div class="INT-lightbox mb-3 text-center">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/unreal_tools_highlight.png"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/unreal_tools_highlight.png" alt=""
+										title="Tools option" /></a>
+							</div>
+
+						</div><!--//gallery-->
+
+
+
+						<p>After selecting new c++ class you will be presented with a option to select a c++ class, we are going to 
+							use actor as the base class for this so scroll down and select actor component and click next
+						</p>
+
+						<div class="INT-lightbox mb-3 text-center">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/unreal_actor_component.png"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/unreal_actor_component.png" alt=""
+										title="Actor Component" /></a>
+							</div>
+
+						</div><!--//gallery-->
+
+						<p>
+							after selecting this component we will be asked to give it a name, i named mine ServerComponent as you can see this already exists for me so ignore this error message.
+						</p>
+
+						<div class="INT-lightbox mb-3 text-center">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/unreal_server_component.png"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/unreal_server_component.png" alt=""
+										title="Server Component" /></a>
+							</div>
+
+						</div><!--//gallery-->
+
+						<p>
+							after you have clicked next it should open visual studio for you to enter you code into the header/cpp files
+						</p>
+
+						<div class="INT-lightbox mb-3 text-center">
+							<div class="col-12 col-md-12 mb-12">
+								<a href="assets/images/unreal_c++_overview.png"><img
+										class="figure-img img-fluid shadow rounded"
+										src="assets/images/unreal_c++_overview.png" alt=""
+										title="Server Component" /></a>
+							</div>
+
+						</div><!--//gallery-->
+
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-5-2">
+						<h2 class="section-heading">C++</h2>
+						<p>Make sure you have selected the ServerComponent.cpp(or what ever you have called it) and you will want to paste the following code </p>
+
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="hlcpp">
+// Fill out your copyright notice in the Description page of Project Settings.
+#include "ServerComponent.h"
+#include "Engine/World.h"
+#include "Json.h"
+
+// Sets default values for this component's properties
+UServerComponent::UServerComponent()
+{
+	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+	// off to improve performance if you don't need them.
+	PrimaryComponentTick.bCanEverTick = false;
+
+
+	// ...
+}
+
+
+// Called when the game starts
+void UServerComponent::BeginPlay()
+{
+	Super::BeginPlay();
+	
+
+	// ...
+	
+}
+
+
+// Called every frame
+void UServerComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+{
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+	// ...
+}
+
+
+FString UServerComponent::ServerPort()
+{
+	FString ServerPort = "Cant Get Server Port...";
+	if (GetWorld()->IsServer())
+	{
+		ServerPort = FString::FromInt(GetWorld()->URL.Port);
+	}
+
+	return FString(ServerPort);
+}
+
+FString UServerComponent::GetPlayedMap()
+{
+	FString Map = GetWorld()->GetMapName();
+	return FString(Map);
+}
+
+FString UServerComponent::TotalPlayers()
+{
+	int32 NumPlayers = 0;
+	for (FConstPlayerControllerIterator Iterator = GetWorld()->GetPlayerControllerIterator(); Iterator; ++Iterator)
+	{
+		NumPlayers++;
+	}
+	return FString(FString::Printf(TEXT("%d"), NumPlayers));
+}
+							
+</code></pre>
+						</div>
+
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-5-3">
+						<h2 class="section-heading">Header File</h2>
+						<p>this is for the header file so you want to make sure you open the ServerComponent.h (or what ever you have called it)</p>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="hlcpp">
+// Fill out your copyright notice in the Description page of Project Settings
+#pragma once
+
+#include "CoreMinimal.h"
+#include "Components/ActorComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "Http.h"
+#include "ServerComponent.generated.h"
+
+
+UCLASS(EditInlineNew, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+class KRYOGEN_API UServerComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
+public:	
+	// Sets default values for this component's properties
+	UServerComponent();
+
+	
+
+protected:
+	// Called when the game starts
+	virtual void BeginPlay() override;
+
+
+	UFUNCTION(BlueprintCallable, Category = "ServerData")
+		FString ServerPort();
+	UFUNCTION(BlueprintCallable, Category = "ServerData")
+		FString GetPlayedMap();
+	UFUNCTION(BlueprintCallable, Category = "ServerData")
+		FString TotalPlayers();
+
+
+
+	
+
+
+public:	
+	// Called every frame
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+
+		
+};
+								
+							
+</code></pre>
+						</div>
+
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-5-4">
+						<h2 class="section-heading">Using in blueprints</h2>
+						<p>now that we have created the component we will want to add this to the gamemode (or where ever u want to add it) 
+							simply open up your game mode blueprint and click add component and type the name of you component and it should appear in the list on the left</p>
+
+							<div class="INT-lightbox mb-3 text-center">
+								<div class="col-12 col-md-12 mb-12">
+									<a href="assets/images/add_component_1.png"><img
+											class="figure-img img-fluid shadow rounded"
+											src="assets/images/add_component_1.png" alt=""
+											title="Server Component" /></a>
+								</div>
+	
+							</div><!--//gallery-->
+
+							<div class="INT-lightbox mb-3 text-center">
+								<div class="col-12 col-md-12 mb-12">
+									<a href="assets/images/add_component_2.png"><img
+											class="figure-img img-fluid shadow rounded"
+											src="assets/images/add_component_2.png" alt=""
+											title="Server Component" /></a>
+								</div>
+	
+							</div><!--//gallery-->
+
+							<div class="INT-lightbox mb-3 text-center">
+								<div class="col-12 col-md-12 mb-12">
+									<a href="assets/images/add_component_3.png"><img
+											class="figure-img img-fluid shadow rounded"
+											src="assets/images/add_component_3.png" alt=""
+											title="Server Component" /></a>
+								</div>
+	
+							</div><!--//gallery-->
+
+
+							<p>now that we have added the component we can add the blueprint code the following uses va-rest so make sure to have this installed to your engine or change this to the http request module that you are using
+							</p>
+
+							<div class="callout-block callout-block-danger me-1">
+								<div class="content">
+									<h3 class="callout-title">
+										<span class="callout-icon-holder">
+											<i class="fas fa-exclamation-triangle"></i>
+										</span><!--//icon-holder-->
+										PRO TIP!
+									</h3>
+									<p class="text-center">
+										you can drag the box around all of the nodes below and press ctrl+c and then go into unreal engine and press ctrl+v and it will create all nodes for you
+
+								you can also toggle full screen, you can use holding of right click to move around the graph and scroll wheel to zoom in and zoom out.
+									</p>
+								</div><!--//content-->
+							</div>
+							
+							<iframe height="800" width="1300" src="https://blueprintue.com/render/a-zheyzl/" scrolling="no" allowfullscreen></iframe>
+
+
+							<p>
+								now that you have copied the code make sure to right click the url attached to the string append and promote it to a variable, now we can reference the web server without having to type it every time
+								so for this you want to just type in your api url so http://you-domain:yourport/ or http://your.ip.address:yourport/ now these are the values which you setup for your you api earlier in the documentation
+								now that you have done this you can compile and save
+
+							</p>
+
+							<p>
+								our next step now is to create a way for us to trigger new world instances and to do this we are going to create 2 blueprints 
+								the first blueprint is going to be a blueprint interface so right click in the content draw and you should see these options, go to blueprints and select blueprint interface 
+							</p>
+							<div class="INT-lightbox mb-3 text-center">
+								<div class="col-12 col-md-12 mb-12">
+									<a href="assets/images/create_interface.png"><img
+											class="figure-img img-fluid shadow rounded"
+											src="assets/images/create_interface.png" alt=""
+											title="Create Interface" /></a>
+								</div>
+	
+							</div><!--//gallery-->
+							<p>
+								now you want to name your interface BPI_LevelLoad and you want to click the + add button and create 2 functions and name them LevelLoad and ShowLoadingScreen 
+								you will want to create outputs for both of these functions and have them configured as per the images below
+							</p>
+
+							<div class="INT-lightbox mb-3 text-center">
+								<div class="col-12 col-md-12 mb-12">
+									<a href="assets/images/create_interface_level_load.png"><img
+											class="figure-img img-fluid shadow rounded"
+											src="assets/images/create_interface_level_load.png" alt=""
+											title="LoadLevel" /></a>
+								</div>
+	
+							</div><!--//gallery-->
+
+							<div class="INT-lightbox mb-3 text-center">
+								<div class="col-12 col-md-12 mb-12">
+									<a href="assets/images/create_interface_show_loading_screen.png"><img
+											class="figure-img img-fluid shadow rounded"
+											src="assets/images/create_interface_show_loading_screen.png" alt=""
+											title="ShowLoadingScreen" /></a>
+								</div>
+	
+							</div><!--//gallery-->
+
+
+							<p>
+								now save this file and we want to create a new blueprint and this blueprint is going to be an actor, so right click the content draw and click blueprint class
+								and select actor at the top
+							</p>
+
+							<div class="INT-lightbox mb-3 text-center">
+								<div class="col-12 col-md-12 mb-12">
+									<a href="assets/images/create_actor.png"><img
+											class="figure-img img-fluid shadow rounded"
+											src="assets/images/create_actor.png" alt=""
+											title="Create Actor" /></a>
+								</div>
+	
+							</div><!--//gallery-->
+
+							<p>
+								You can name this actor anything you like however i called mine LevelLoad, now you want to open the blueprint the first thing 
+								we want to now is to add the interface to the actor, so click on class settings and then under the implemented interfaces section 
+								we click add and type in BPI_LevelLoad then we click compile and save.
+							</p>
+
+							<div class="INT-lightbox mb-3 text-center">
+								<div class="col-12 col-md-12 mb-12">
+									<a href="assets/images/create_actor_interface.png"><img
+											class="figure-img img-fluid shadow rounded"
+											src="assets/images/create_actor_interface.png" alt=""
+											title="Create Actor" /></a>
+								</div>
+	
+							</div><!--//gallery-->
+
+							<p>
+								After this you will want to create a box collision by clicking add then clicking box collision and in my case i added a text render as well so i can see which 
+								worlds i am going to trigger spin up for you dont need to add this but it helps debugging at the beginning 😊
+							
+							</p>
+							<p> if you are going to use the text render the you will want to open the construction script and copy+paste the following code and remember to right click LevelToLoad and promote it to a variable </p>
+							<iframe height="800" width="1300" src="https://blueprintue.com/render/9n1_70zj/" scrolling="no" allowfullscreen></iframe>
+
+							<p>
+								now on the event graph you will want to paste the following and no doubt expand upon this logic for verifying which actor overlapped etc.. 
+								but this is more for you tailoring to your own personal project.
+
+							</p>
+							<iframe height="800" width="1300" src="https://blueprintue.com/render/lc2ikwi4/" scrolling="no" allowfullscreen></iframe>
+
+							<p>
+								Now that you have added that compile and save and we are now going to open your player controller and we will need to add the blueprint interface to your player 
+								controller like we did earlier by clicking class settings and going down to implemented interfaces and clicking add and typing BPI_LevelLoad once you have 
+								done this you can then paste this code into your player controller
+							</p>
+
+							<iframe height="800" width="1300" src="https://blueprintue.com/render/33vdi620/" scrolling="no" allowfullscreen></iframe>
+
+
+							<p>
+								compile and save your player controller and now you can add a couple of the LevelLoad actors to your level and make sure to go to the details panel 
+								and change the name of the level to load so if your map is called dungeon_20 then you would change the level to load to dungeon_20 and duplicate and repeat the process
+								for each and every level you have.. you can then compile and test making sure to make a server build and adding the maps to your project settings
+							</p>
+
+							<div class="INT-lightbox mb-3 text-center">
+								<div class="col-12 col-md-12 mb-12">
+									<a href="assets/images/completed_example_level.jpg"><img
+											class="figure-img img-fluid shadow rounded"
+											src="assets/images/completed_example_level.jpg" alt=""
+											title="Final Result" /></a>
+								</div>
+	
+							</div><!--//gallery-->
+
+					</section><!--//section-->
+				</article><!--//docs-article-->
+
+
+				<article class="docs-article" id="section-6">
+					<header class="docs-header">
+						<h1 class="docs-heading">FAQ</h1>
+						<section class="docs-intro">
+							<p>Coming soon...</p>
+						</section><!--//docs-intro-->
+					</header>
+					
+				</article><!--//docs-article-->
+
+
+
+
+
+			</div>
+		</div>
+	</div><!--//docs-wrapper-->
+
+
+	<!-- Javascript -->
+
+	<script src="assets/plugins/popper.min.js"></script>
+	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+	<!-- Page Specific JS -->
+	<script src="assets/plugins/smoothscroll.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+
+	<script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
+	<script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+	<script src="assets/js/docs.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.js"
+		integrity="sha512-19TrqSGVSwaC2IDGHrD+tAkX59/w5cXy0BHDVwn7OJQXxavORhFSFM7DOO9soXKuo8O7gGNHiG9R2vFrXRBcTQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="assets/js/highlight-custom.js"></script>
+
+
+
+</body>
+
+</html>
