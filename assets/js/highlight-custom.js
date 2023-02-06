@@ -165,3 +165,26 @@ $("#pacman").hide();
 
 
 
+
+
+$( document ).ready(function() {
+    var clipboard = new ClipboardJS('.copy');
+    clipboard.on('success', function(e) {
+      
+      let original = $(e.trigger).text();
+      console.log(original)
+      $(e.trigger).text("Copied!");
+       e.clearSelection();
+      setTimeout(function() {
+        $(e.trigger).text(original);
+      }, 1500);
+    })
+});
+   
+
+
+
+
+
+
+

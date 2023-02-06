@@ -100,7 +100,7 @@ well i see you have found an easter egg :O maybe there is more? who will know?
 
 					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
 						<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fab fa-discord fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="https://discord.gg/teamvash"><i class="fab fa-discord fa-fw"></i></a></li>
 						<li class="list-inline-item"><a href="#"><i class="fab fa-youtube fa-fw"></i></a></li>
 
 
@@ -175,7 +175,7 @@ well i see you have found an easter egg :O maybe there is more? who will know?
 						</iframe>
 					</div>
 					<header class="docs-header">
-						<h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 2023-14-01</span>
+						<h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 2023-06-02</span>
 						</h1>
 						<section class="docs-intro">
 							<p>v0dka Instance Launcher is a project I have written in Python and is targeted towards Linux-based systems. 
@@ -541,13 +541,13 @@ well i see you have found an easter egg :O maybe there is more? who will know?
 
 						lets first make sure our packages are upto date
 						<br class="pb-2"></br>
-						<div class="text-center"><code> sudo apt update && sudo apt upgrade</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo apt update && sudo apt upgrade"> sudo apt update && sudo apt upgrade</code></div>
 						<br class="pb-2"></br>
 						then we need to install the screen, lsof and systemd packages we can do this with a 1 liner, the
 						-y flag at the end will tell it to just accept and install each package
 						without having to press y and enter to install each package
 						<br class="pb-2"></br>
-						<div class="text-center"><code>sudo apt install screen lsof systemd wget -y</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo apt install screen lsof systemd wget -y">sudo apt install screen lsof systemd wget -y</code></div>
 
 
 						</p>
@@ -565,7 +565,7 @@ well i see you have found an easter egg :O maybe there is more? who will know?
 							<br class="pb-2"></br>
 							we can run this dpkg command:
 							<br class="pb-2"></br>
-						<div class="text-center"><code>dpkg -S python3 | grep /usr/bin</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="dpkg -S python3 | grep /usr/bin">dpkg -S python3 | grep /usr/bin</code></div>
 						<br class="pb-2"></br>
 						<div class="install-lightbox mb-3">
 							<div class="col-12 col-md-12 mb-12">
@@ -578,7 +578,7 @@ well i see you have found an easter egg :O maybe there is more? who will know?
 						<br class="pb-2"></br>
 						or we can run this apt command:
 						<br class="pb-2"></br>
-						<div class="text-center"><code>apt list --installed | grep python3</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="dpkg -S python3 | grep /usr/bin">apt list --installed | grep python3</code></div>
 						<br class="pb-2"></br>
 
 						<div class="install-lightbox mb-3">
@@ -616,7 +616,7 @@ well i see you have found an easter egg :O maybe there is more? who will know?
 						package
 						prompt
 						<br class="pb-2" id="linux_chain_commands"></br>
-						<code>sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev -y</code>
+						<code class="copy" data-clipboard-text="sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev -y">sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev -y</code>
 						<br class="pb-2"></br>
 						In linux we can chain commands together in the command line using the different operators && ||
 						;
@@ -633,7 +633,7 @@ A ; B Run A and then B, regardless of A outcome
 						new extracted python directory with 1 line however you could run all these
 						commands individually but for me that is effort and i like shortcuts where i can take them
 						<br class="pb-2"></br>
-						<code>mkdir ~/python310 && cd ~/python310 && wget https://www.python.org/ftp/python/3.10.0/Python-3.10.0.tgz && tar -xf Python-3.10.*.tgz && cd Python-3.10.*/</code>
+						<code class="copy" data-clipboard-text="mkdir ~/python310 && cd ~/python310 && wget https://www.python.org/ftp/python/3.10.0/Python-3.10.0.tgz && tar -xf Python-3.10.*.tgz && cd Python-3.10.*/">mkdir ~/python310 && cd ~/python310 && wget https://www.python.org/ftp/python/3.10.0/Python-3.10.0.tgz && tar -xf Python-3.10.*.tgz && cd Python-3.10.*/</code>
 						<br class="pb-2"></br>
 
 						now that we have the files download we need to run the configure command to check if the
@@ -643,7 +643,7 @@ A ; B Run A and then B, regardless of A outcome
 						<br class="pb-2"></br>
 
 						<div class="text-center">
-							<code>./configure --enable-optimizations --prefix=/usr/bin --with-ensurepip=install</code>
+							<code class="copy" data-clipboard-text="./configure --enable-optimizations --prefix=/usr/bin --with-ensurepip=install">./configure --enable-optimizations --prefix=/usr/bin --with-ensurepip=install</code>
 						</div>
 
 						<br class="pb-2"></br>
@@ -679,7 +679,7 @@ creating Makefile
 						<br class="pb-2"></br>
 						if you don't know how many cores your machine has you can run the following command:
 						<br class="pb-2"></br>
-						<div class="text-center"><code>nproc</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="nproc">nproc</code></div>
 						<br class="pb-2"></br>
 						<div class="install-lightbox mb-3 text-center">
 							<div class="col-12 col-md-12 mb-12">
@@ -696,7 +696,7 @@ creating Makefile
 						add 4 however this will be
 						different for your system so specify your number of cores
 						<br class="pb-2"></br>
-						<div class="text-center"><code>sudo make -j 4</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo make -j 4">sudo make -j 4</code></div>
 
 						<br class="pb-2"></br>
 						once make is complete you should have the following output:
@@ -720,12 +720,12 @@ make[1]: Leaving directory '/home/debian/Python-3.10.0'
 						python already that way we will no overwrite the previous install
 						of python
 						<br class="pb-2"></br>
-						<div class="text-center"><code>sudo make altinstall</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo make altinstall">sudo make altinstall</code></div>
 						<br class="pb-2"></br>
 
 						once this command has finished doing everything you will want to verify the install
 						<br class="pb-2"></br>
-						<div class="text-center"><code>python3.10 --version</code></div>
+						<div class="text-center"><code  class="copy" data-clipboard-text="python3.10 --version" >python3.10 --version</code></div>
 						<br class="pb-2"></br>
 						if this returns python3.10.0 congrats you have successfully built python from source!
 						<br class="pb-2"></br>
@@ -778,13 +778,13 @@ make[1]: Leaving directory '/home/debian/Python-3.10.0'
 						the debian package file
 						<br class="pb-2"></br>
 						<div class="text-center">
-							<code>cd ~/ && wget https://dev.mysql.com/get/mysql-apt-config_0.8.20-1_all.deb</code>
+							<code class="copy" data-clipboard-text="cd ~/ && wget https://dev.mysql.com/get/mysql-apt-config_0.8.20-1_all.deb" >cd ~/ && wget https://dev.mysql.com/get/mysql-apt-config_0.8.20-1_all.deb</code>
 						</div>
 						<br class="pb-2"></br>
 						now that we have downloaded the deb package file we can install and configure it using the
 						following command
 						<br class="pb-2"></br>
-						<div class="text-center"><code>sudo apt install ./mysql-apt-config_*_all.deb</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo apt install ./mysql-apt-config_*_all.deb">sudo apt install ./mysql-apt-config_*_all.deb</code></div>
 						<br class="pb-2"></br>
 						After you have run the above command there will be a series of screens to navigate through
 						<br class="pb-2"></br>
@@ -853,7 +853,7 @@ make[1]: Leaving directory '/home/debian/Python-3.10.0'
 
 						<div id="easter-egg">
 							<br class="pb-2"></br>
-							<div class="text-center"><code>sudo apt update && install mysql-server</code></div>
+							<div class="text-center"><code class="copy" data-clipboard-text="sudo apt update && install mysql-server">sudo apt update && install mysql-server</code></div>
 							<br class="pb-2"></br>
 						</div>
 
@@ -861,11 +861,11 @@ make[1]: Leaving directory '/home/debian/Python-3.10.0'
 						<br class="pb-2"></br>
 						Lets update our system to get the updated package list now that we have added the new repo
 						<br class="pb-2"></br>
-						<div class="text-center"><code>sudo apt update</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo apt update">sudo apt update</code></div>
 						<br class="pb-2"></br>
 						now that we have updated out system we can now do a mysql install run the following command:
 						<br class="pb-2"></br>
-						<div class="text-center"><code>sudo apt install mysql-server</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo apt install mysql-server" >sudo apt install mysql-server</code></div>
 						<br class="pb-2"></br>
 						<div class="install-lightbox mb-3 text-center">
 							<div class="col-12 col-md-12 mb-12">
@@ -894,12 +894,12 @@ make[1]: Leaving directory '/home/debian/Python-3.10.0'
 
 						run the following command
 						<br class="pb-2"></br>
-						<div class="text-center"><code>sudo mysql_secure_installation</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo mysql_secure_installation">sudo mysql_secure_installation</code></div>
 						<br class="pb-2"></br>
 
 						Once the installation is completed we can enable the MySQL service so that it could start
 						automatically with system boot
-						<div class="text-center"><code>sudo systemctl enable --now mysql</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo systemctl enable --now mysql" >sudo systemctl enable --now mysql</code></div>
 						<br class="pb-2"></br>
 
 
@@ -926,7 +926,7 @@ make[1]: Leaving directory '/home/debian/Python-3.10.0'
 						<br class="pb-2"></br>
 						before we can add a user we need to connect to the database after pressing enter it will prompt
 						you to enter your password
-						<div class="text-center"><code>mysql -u root -p</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="mysql -u root -p">mysql -u root -p</code></div>
 
 
 						<br class="pb-2"></br>
@@ -935,7 +935,7 @@ make[1]: Leaving directory '/home/debian/Python-3.10.0'
 						and what you want your password to be.
 						<br class="pb-2"></br>
 						<div class="text-center">
-							<code>CREATE USER 'the_username'@'localhost' IDENTIFIED BY 'the_password';</code>
+							<code class="copy" data-clipboard-text="CREATE USER 'the_username'@'localhost' IDENTIFIED BY 'the_password';">CREATE USER 'the_username'@'localhost' IDENTIFIED BY 'the_password';</code>
 						</div>
 
 						<br class="pb-2"></br>
@@ -944,21 +944,21 @@ make[1]: Leaving directory '/home/debian/Python-3.10.0'
 						and what you want your password to be.
 						<br class="pb-2"></br>
 						<div class="text-center">
-							<code> CREATE USER 'the_username'@'%' IDENTIFIED BY 'the_password';</code>
+							<code class="copy" data-clipboard-text="CREATE USER 'the_username'@'%' IDENTIFIED BY 'the_password';"> CREATE USER 'the_username'@'%' IDENTIFIED BY 'the_password';</code>
 						</div>
 						<br class="pb-2"></br>
 						now that we have setup local and remote user we need to give it permissions we can do it with
 						the following commands replace the_username with the
 						username that you setup in previous commands.
 						<br class="pb-2"></br>
-						<div class="text-center"><code> GRANT ALL ON *.* TO 'the_username'@'localhost';</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text=" GRANT ALL ON *.* TO 'the_username'@'localhost';"> GRANT ALL ON *.* TO 'the_username'@'localhost';</code></div>
 						<br class="pb-2"></br>
-						<div class="text-center"><code> GRANT ALL ON *.* TO 'the_username'@'%';</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="GRANT ALL ON *.* TO 'the_username'@'%';"> GRANT ALL ON *.* TO 'the_username'@'%';</code></div>
 						<br class="pb-2"></br>
 						now we need to tell the database to refresh its permissions for the new user permissions that we
 						have setup
 						<br class="pb-2"></br>
-						<div class="text-center"><code> FLUSH PRIVILEGES;</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="FLUSH PRIVILEGES;"> FLUSH PRIVILEGES;</code></div>
 
 
 
@@ -981,7 +981,7 @@ make[1]: Leaving directory '/home/debian/Python-3.10.0'
 						the first thing you will want to do is install the required PIP packages
 						you can do this manually or use the following command
 						<br class="pb-2"></br>
-						<div class="text-center"><code>pip install -r requirements.txt</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="pip install -r requirements.txt">pip install -r requirements.txt</code></div>
 						<br class="pb-2"></br>
 						if you are looking to do this manually you can open the requirements.txt file and find the
 						version and package name to be installed.
@@ -1097,7 +1097,7 @@ WantedBy=multi-user.target
 						directory where this file is located on your linux machine
 						and run the command
 						<br class="pb-2"></br>
-						<div class="text-center"><code>pwd</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="pwd">pwd</code></div>
 						<br class="pb-2"></br>
 						this will output the full path which you can copy and place <strong>/home/your path
 							here/ServerInstanceManagerWebApi/main.py</strong>
@@ -1113,35 +1113,35 @@ WantedBy=multi-user.target
 						know about this new program to be run as a daemon
 						<br class="pb-2"></br>
 						<div class="text-center">
-							<code>sudo cp vodka_api.service /etc/systemd/system/vodka_api.service</code></div>
+							<code class="copy" data-clipboard-text="sudo cp vodka_api.service /etc/systemd/system/vodka_api.service">sudo cp vodka_api.service /etc/systemd/system/vodka_api.service</code></div>
 						<br class="pb-2"></br>
 						now we need to reload to pick up our new service
 						<br class="pb-2"></br>
-						<div class="text-center"><code>sudo systemctl daemon-reload</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo systemctl daemon-reload">sudo systemctl daemon-reload</code></div>
 						<br class="pb-2"></br>
 						if you want the system to auto start the script on system boot/reboot run the following command
 						<br class="pb-2"></br>
-						<div class="text-center"><code>sudo systemctl enable vodka_api.service</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo systemctl enable vodka_api.service">sudo systemctl enable vodka_api.service</code></div>
 						<br class="pb-2"></br>
 						if you have already got this running on boot/reboot and you want to disable it from autostart
 						you can run the following
 						<br class="pb-2"></br>
-						<div class="text-center"><code>sudo systemctl disable vodka_api.service</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo systemctl disable vodka_api.service">sudo systemctl disable vodka_api.service</code></div>
 
 						<br class="pb-2"></br>
 						so now that we have our service setup and configured we can now use this to start/stop/restart
 						to manage the process
 						<br class="pb-2"></br>
-						<div class="text-center"><code>sudo service vodka_api start</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo service vodka_api start">sudo service vodka_api start</code></div>
 						<br class="pb-2"></br>
-						<div class="text-center"><code>sudo service vodka_api stop</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo service vodka_api stop">sudo service vodka_api stop</code></div>
 						<br class="pb-2"></br>
-						<div class="text-center"><code>sudo service vodka_api restart</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo service vodka_api restart">sudo service vodka_api restart</code></div>
 						<br class="pb-2"></br>
 						if we need to find out what is going on with this service we can request status and get an
 						output
 						<br class="pb-2"></br>
-						<div class="text-center"><code>sudo service vodka_api status</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo service vodka_api status">sudo service vodka_api status</code></div>
 						<br class="pb-2"></br>
 						<div class="API-lightbox mb-3">
 							<div class="col-12 col-md-12 mb-12">
@@ -1175,7 +1175,7 @@ WantedBy=multi-user.target
 						for me python3 is my association
 
 						<br class="pb-2"></br>
-						<div class="text-center"><code>python3 main.py</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="python3 main.py">python3 main.py</code></div>
 
 						<br class="pb-2"></br>
 						<div class="API-lightbox mb-3">
@@ -1212,19 +1212,19 @@ WantedBy=multi-user.target
 						<br class="pb-2"></br>
 						<h5>Background process:</h5>
 						<br class="pb-2"></br>
-						<div class="text-center"><code>(python3 main.py &)</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="(python3 main.py &)">(python3 main.py &)</code></div>
 
 						<br class="pb-2"></br>
 						to kill background process (if fg works):
 						<br class="pb-2"></br>
-						<div class="text-center"><code>fg </code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="fg">fg </code></div>
 						<br class="pb-2"></br>
 						if fg works then it will bring the application up and you can press control+c to terminate it
 						<br class="pb-2"></br>
 						if fg does not work then we need to find process id and kill it the second column is the process
 						id and in my example image that is 10990
 						<br class="pb-2"></br>
-						<div class="text-center"><code>ps -aux | grep main.py </code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="ps -aux | grep main.py">ps -aux | grep main.py </code></div>
 						<br class="pb-2"></br>
 						<div class="API-lightbox mb-3">
 							<div class="col-12 col-md-12 mb-12">
@@ -1237,14 +1237,14 @@ WantedBy=multi-user.target
 						now we know the process id we can now kill it so replace 10990 with the process id for your
 						process
 						<br class="pb-2"></br>
-						<div class="text-center"><code>kill -9 10990 </code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="kill -9 10990">kill -9 10990 </code></div>
 						<br class="pb-2"></br>
 						<h5>Screen (easier way):</h5>
 						the following command creates an interactive shell make sure to the relative path to your python
 						and directory for the API
 
 						<div class="text-center">
-							<code>screen -S vodka_API -d -m /usr/bin/python3 /home/debian/new_build_test/ServerInstanceManagerWebApi/main.py</code>
+							<code class="copy" data-clipboard-text="screen -S vodka_API -d -m /usr/bin/python3 /home/debian/new_build_test/ServerInstanceManagerWebApi/main.py">screen -S vodka_API -d -m /usr/bin/python3 /home/debian/new_build_test/ServerInstanceManagerWebApi/main.py</code>
 						</div>
 
 						<br class="pb-2"></br>
@@ -1256,7 +1256,7 @@ WantedBy=multi-user.target
 						<br class="pb-2"></br>
 						we can list screens by running the command
 
-						<div class="text-center"><code>screen -ls</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="screen -ls">screen -ls</code></div>
 						<br class="pb-2"></br>
 						<div class="API-lightbox mb-3">
 							<div class="col-12 col-md-12 mb-12">
@@ -1269,7 +1269,7 @@ WantedBy=multi-user.target
 						<br class="pb-2"></br>
 						we can connect into the screen with screen -x (name of screen)
 						<br class="pb-2"></br>
-						<div class="text-center"><code>screen -X vodka_API</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="screen -X vodka_API">screen -X vodka_API</code></div>
 
 
 						<br class="pb-2"></br>
@@ -1283,7 +1283,7 @@ WantedBy=multi-user.target
 						session name
 
 						<br class="pb-2"></br>
-						<div class="text-center"><code>screen -XS vodka_API quit</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="screen -XS vodka_API quit">screen -XS vodka_API quit</code></div>
 
 
 
@@ -1333,7 +1333,7 @@ WantedBy=multi-user.target
 						manager
 						you can do this manually or use the following command
 						<br class="pb-2"></br>
-						<div class="text-center"><code>pip install -r requirements.txt</code></div>
+						<div class="text-center"><code class="copy" data-clipboard-text="pip install -r requirements.txt">pip install -r requirements.txt</code></div>
 						<br class="pb-2"></br>
 						if you are looking to do this manually you can open the requirements.txt file and find the
 						version and package name to be installed.
@@ -2091,6 +2091,7 @@ public:
 						<h1 class="docs-heading">FAQ</h1>
 						<section class="docs-intro">
 							<p>Coming soon...</p>
+							
 						</section><!--//docs-intro-->
 					</header>
 					
@@ -2113,8 +2114,12 @@ public:
 
 	<!-- Page Specific JS -->
 	<script src="assets/plugins/smoothscroll.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+	
+	
 	<script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
 	<script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
 	<script src="assets/js/docs.js"></script>
@@ -2123,6 +2128,7 @@ public:
 		integrity="sha512-19TrqSGVSwaC2IDGHrD+tAkX59/w5cXy0BHDVwn7OJQXxavORhFSFM7DOO9soXKuo8O7gGNHiG9R2vFrXRBcTQ=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="assets/js/highlight-custom.js"></script>
+	
 
 
 

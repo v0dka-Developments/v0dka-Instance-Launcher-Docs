@@ -113,10 +113,3 @@ var install = new SimpleLightbox('.install-lightbox a', {/* options */ });
 var vodka_api = new SimpleLightbox('.API-lightbox a', {/* options */ });
 var integration = new SimpleLightbox('.INT-lightbox a', {/* options */ });
 
-
-
-
-
-
-
-
