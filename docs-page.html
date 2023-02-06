@@ -778,8 +778,12 @@ make[1]: Leaving directory '/home/debian/Python-3.10.0'
 						the debian package file
 						<br class="pb-2"></br>
 						<div class="text-center">
-							<code class="copy" data-clipboard-text="cd ~/ && wget https://dev.mysql.com/get/mysql-apt-config_0.8.20-1_all.deb" >cd ~/ && wget https://dev.mysql.com/get/mysql-apt-config_0.8.20-1_all.deb</code>
+							<code class="copy" data-clipboard-text="cd ~/ && wget https://repo.mysql.com//mysql-apt-config_0.8.24-1_all.deb" >cd ~/ && wget https://repo.mysql.com//mysql-apt-config_0.8.24-1_all.deb</code>
 						</div>
+
+						if you have an error like the following:  "The following signatures couldn't be verified because the public key is not available:" it is possible the public key has expired for the link above and 
+						you should download the latest from mysql here https://dev.mysql.com/downloads/repo/apt/
+
 						<br class="pb-2"></br>
 						now that we have downloaded the deb package file we can install and configure it using the
 						following command
@@ -790,8 +794,8 @@ make[1]: Leaving directory '/home/debian/Python-3.10.0'
 						<br class="pb-2"></br>
 
 						<ul>
-							<li><strong class="me-1">TAB:</strong> change the selection movement on the screen up and
-								down</li>
+							<li><strong class="me-1">TAB:</strong> change the selection to menu or ok</li>
+							<li><strong class="me-1">ARROW KEYS:</strong> up arrow to move up and down arrow to move</li>
 							<li><strong class="me-1">ENTER:</strong> to select the highlighted object</li>
 
 						</ul>
@@ -983,6 +987,11 @@ make[1]: Leaving directory '/home/debian/Python-3.10.0'
 						<br class="pb-2"></br>
 						<div class="text-center"><code class="copy" data-clipboard-text="pip install -r requirements.txt">pip install -r requirements.txt</code></div>
 						<br class="pb-2"></br>
+						if python is pre-installed and you get there is no pip command found use the following command 
+						<br class="pb-2"></br>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo apt-get install python3-pip"> sudo apt-get install python3-pip</code></div>
+
+						<br class="pb-2"></br>
 						if you are looking to do this manually you can open the requirements.txt file and find the
 						version and package name to be installed.
 
@@ -1078,12 +1087,15 @@ ServerAddSecretKey = ""
 						<br class="pb-2"></br>
 						<div class="docs-code-block">
 							<pre class="shadow-lg rounded"><code class="bash hljs">[Unit]
-Description=API for Vodka Instance Manager
+[Unit]
+Description=Vodka API
 After=multi-user.target
 
 [Service]
 Type=idle
-ExecStart=/usr/bin/python3 /home/your path here/ServerInstanceManagerWebApi/main.py
+ExecStart=/usr/bin/python3 /home/debian/ServerInstanceManagerWebApi/main.py
+WorkingDirectory= /home/debian/ServerInstanceManagerWebApi
+Environment="PATH=/home/debian/.local/bin:$PATH"
 User=debian
 
 [Install]
@@ -1399,6 +1411,122 @@ ServerAddSecretKey = "IamASecretKeyWooo!"
 						<br class="pb-2"></br>
 						<code>ServerAddSecretKey</code>(string) this key is used to validated the API is not being used
 						by people who should not have access this should be the same as the key in the API config
+
+
+
+						<br class="pb-2" id="as_service_manager"></br>
+						<div class="callout-block callout-block-warning me-1">
+							<div class="content">
+								<h3 class="callout-title">
+									<span class="callout-icon-holder">
+										<i class="fas fa-exclamation-triangle"></i>
+									</span><!--//icon-holder-->
+									NOTE!
+								</h3>
+								<p class="text-center"> Adding a service part is advised but not essential if you are
+									not going to run as a service skip ahead by clicking <a
+										href="#not_as_service_manager">here</a> </p>
+							</div><!--//content-->
+						</div>
+						<br class="pb-2"></br>
+						<h5>Service:</h5>
+						if you want to be able to start your program on system restart or start/stop the program easily
+						using system commands then you should continue with this setup
+						if not then skip this step
+						<br class="pb-2"></br>
+						the first thing we want to to is modify the vodka_manager.service
+						<br class="pb-2"></br>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="bash hljs">[Unit]
+[Unit]
+Description=VodkaInstanceManager
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python3 /home/debian/ServiceInstanceManager/start.py start
+WorkingDirectory= /home/debian/ServiceInstanceManager
+Environment="PATH=/home/debian/.local/bin:$PATH"
+User=debian
+
+[Install]
+WantedBy=multi-user.target						
+</code></pre>
+						</div><!--//docs-code-block-->
+						<br class="pb-2"></br>
+						so the part of this script we will want to modify is the ExecStart path and the User the path
+						should be the full relative path to the main.py
+						in the ServerInstanceManagerWebApi folder, if you are unsure on the full path navigate to the
+						directory where this file is located on your linux machine
+						and run the command
+						<br class="pb-2"></br>
+						<div class="text-center"><code class="copy" data-clipboard-text="pwd">pwd</code></div>
+						<br class="pb-2"></br>
+						this will output the full path which you can copy and place <strong>/home/your path
+							here/ServerInstanceManagerWebApi/start.py start</strong>
+						with your system path and remember to have the /start.py start at the end.
+						<br class="pb-2"></br>
+						you will now want to update the working directory to the result of the output from pwd earlier this tells the script where the main directory
+						of the scripts are located so it can do directory association if needed
+						<br class="pb-2"></br>
+						you will now want to update the Environment variable to reflect your user so the user which you installed the pip packages under for me i installed under the user debian 
+						however if you installed under the user joe you would change it to the following Environment="PATH=/home/joe/.local/bin:$PATH"
+						<br class="pb-2"></br>
+						now that you have changed the system path you will also want to change the User, this user will
+						be the owner of the process so be careful what you set this to
+						i would not advise root for me i used the user debian however you can set this to any user you
+						have setup on your system
+						<div class="text-center"><code>User=change your user</code></div>
+						<br class="pb-2"></br>
+						now that we have setup the service file we need to copy it to our system folder so the system
+						know about this new program to be run as a daemon
+						<br class="pb-2"></br>
+						<div class="text-center">
+							<code class="copy" data-clipboard-text="sudo cp vodka_manager.service /etc/systemd/system/vodka_manager.service">sudo cp vodka_manager.service /etc/systemd/system/vodka_manager.service</code></div>
+						<br class="pb-2"></br>
+						now we need to reload to pick up our new service
+						<br class="pb-2"></br>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo systemctl daemon-reload">sudo systemctl daemon-reload</code></div>
+						<br class="pb-2"></br>
+						if you want the system to auto start the script on system boot/reboot run the following command
+						<br class="pb-2"></br>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo systemctl enable vodka_manager.service">sudo systemctl enable vodka_manager.service</code></div>
+						<br class="pb-2"></br>
+						if you have already got this running on boot/reboot and you want to disable it from autostart
+						you can run the following
+						<br class="pb-2"></br>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo systemctl disable vodka_manager.service">sudo systemctl disable vodka_manager.service</code></div>
+
+						<br class="pb-2"></br>
+						so now that we have our service setup and configured we can now use this to start/stop/restart
+						to manage the process
+						<br class="pb-2"></br>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo service vodka_manager start">sudo service vodka_manager start</code></div>
+						<br class="pb-2"></br>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo service vodka_manager stop">sudo service vodka_manager stop</code></div>
+						<br class="pb-2"></br>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo service vodka_manager restart">sudo service vodka_manager restart</code></div>
+						<br class="pb-2"></br>
+						if we need to find out what is going on with this service we can request status and get an
+						output
+						<br class="pb-2"></br>
+						<div class="text-center"><code class="copy" data-clipboard-text="sudo service vodka_manager status">sudo service vodka_manager status</code></div>
+						
+						<br class="pb-2" id="not_as_service_manager"></br>
+						<div class="callout-block callout-block-warning me-1">
+							<div class="content">
+								<h3 class="callout-title">
+									<span class="callout-icon-holder">
+										<i class="fas fa-exclamation-triangle"></i>
+									</span><!--//icon-holder-->
+									NOTE!
+								</h3>
+								<p class="text-center"> if you want to run it as a service click <a
+										href="#as_service_manager">HERE</a> however the following steps are for those who want
+									to run the system manually </p>
+							</div><!--//content-->
+						</div>
+
 
 					</section><!--//section-->
 				</article><!--//docs-article-->
